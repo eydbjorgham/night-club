@@ -2,6 +2,7 @@ import Image from "next/image";
 import { Ubuntu } from "next/font/google";
 import Nav from "@/app/components/Nav";
 import Overskrift from "./components/Overskrift";
+import Welcome from "./components/Welcome";
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -28,6 +29,7 @@ export default function Home() {
           <main>
             <section>
             <Overskrift text="Welcome in nightclub" />
+            <Welcome />
             </section>
           </main>
           <footer></footer>
