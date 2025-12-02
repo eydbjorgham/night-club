@@ -1,9 +1,15 @@
 @import "tailwindcss";
 
 :root {
+  /* COLORS */
   --primary-color: #000000;
   --secondary-color: #ffffff;
   --tertiary-color: #FF2A70;
+
+  /* PADDING */
+  --overskrift-padding-top: 5em; 
+  --section-padding: 3em;
+  --padding: 2em;
 }
 /* 
 @theme inline {
