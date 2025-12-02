@@ -12,7 +12,7 @@ const Gallery = () => {
 ];
 
   return (
-    <div>
+    <div className="mt-(--padding)">
         <div className="grid grid-cols-4">
             {images.slice(0, 4).map((image, index) => (
                 <Image
