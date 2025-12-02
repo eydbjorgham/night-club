@@ -4,6 +4,7 @@ import Nav from "@/app/components/Nav";
 import Overskrift from "./components/Overskrift";
 import Welcome from "./components/Welcome";
 import Events from "./components/Events";
+import Gallery from "./components/Gallery";
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -35,6 +36,10 @@ export default function Home() {
             <section>
               <Overskrift text="Events of the month" />
               <Events />
+            </section>
+            <section>
+              <Overskrift text="Gallery" />
+              <Gallery />
             </section>
           </main>
           <footer></footer>
