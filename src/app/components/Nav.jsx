@@ -11,7 +11,7 @@ const Nav = () => {
           <li>
             <a
               href="/"
-              className="relative pb-2 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-linear-to-r after:from-black after:via-(--tertiary-color) after:to-black hover:after:w-full"
+              className="relative pb-2 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-linear-to-r after:from-black after:via-(--tertiary-color) after:to-black hover:text-(--tertiary-color) hover:after:w-full"
             >
               home
             </a>
@@ -19,7 +19,7 @@ const Nav = () => {
           <li>
             <a
               href="/about"
-              className="relative pb-2 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-linear-to-r after:from-black after:via-(--tertiary-color) after:to-black hover:after:w-full"
+              className="relative pb-2 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-linear-to-r after:from-black after:via-(--tertiary-color) after:to-black hover:text-(--tertiary-color) hover:after:w-full"
             >
               blog
             </a>
@@ -27,7 +27,7 @@ const Nav = () => {
           <li>
             <a
               href="/contact"
-              className="relative pb-2 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-linear-to-r after:from-black after:via-(--tertiary-color) after:to-black hover:after:w-full"
+              className="relative pb-2 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-linear-to-r after:from-black after:via-(--tertiary-color) after:to-black hover:text-(--tertiary-color) hover:after:w-full"
             >
               book table
             </a>
@@ -35,7 +35,7 @@ const Nav = () => {
           <li>
             <a
               href="/contact"
-              className="relative pb-2 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-linear-to-r after:from-black after:via-(--tertiary-color) after:to-black hover:after:w-full"
+              className="relative pb-2 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-linear-to-r after:from-black after:via-(--tertiary-color) after:to-black hover:text-(--tertiary-color) hover:after:w-full"
             >
               contact us
             </a>
@@ -43,7 +43,7 @@ const Nav = () => {
           <li>
             <a
               href="/"
-              className="relative pb-2 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-linear-to-r after:from-black after:via-(--tertiary-color) after:to-black hover:after:w-full"
+              className="relative pb-2 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-linear-to-r after:from-black after:via-(--tertiary-color) after:to-black hover:text-(--tertiary-color) hover:after:w-full"
             >
               log in
             </a>
