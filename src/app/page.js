@@ -5,6 +5,7 @@ import Overskrift from "./components/Overskrift";
 import Welcome from "./components/Welcome";
 import Events from "./components/Events";
 import Gallery from "./components/Gallery";
+
 import Staff from "./components/Staff";
 
 const ubuntu = Ubuntu({
@@ -47,7 +48,9 @@ export default function Home() {
               <Staff />
             </section>
           </main>
-          <footer></footer>
+          <footer>
+            <Footer />
+          </footer>
         </div>
       </div>
     </>
