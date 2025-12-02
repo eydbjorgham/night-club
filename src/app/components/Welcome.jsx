@@ -1,5 +1,6 @@
 import Image from "next/image";
 
+
 const Welcome = () => {
   return (
     <div className="mt-(--section-padding) flex justify-center gap-8">
