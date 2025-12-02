@@ -6,6 +6,7 @@ import Welcome from "./components/Welcome";
 import Events from "./components/Events";
 import Gallery from "./components/Gallery";
 import Staff from "./components/Staff";
+import RecentBlog from "./components/RecentBlog";
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -45,6 +46,10 @@ export default function Home() {
             <section>
               <Overskrift text="Staff" />
               <Staff />
+            </section>
+            <section>
+              <Overskrift text="Recent Blog" />
+              <RecentBlog />
             </section>
           </main>
           <footer></footer>
