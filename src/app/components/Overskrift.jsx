@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Overskrift = ({ text }) => {
   return (
-    <div className="flex flex-col items-center gap-8">
+    <div className="flex flex-col items-center gap-5">
       <h1 className="text-center text-5xl text-white uppercase">{text}</h1>
       <Image
         src="/assets/bottom_line2.png"
