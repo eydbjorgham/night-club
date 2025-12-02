@@ -20,7 +20,7 @@ export default function Home() {
               height={300}
               className="absolute top-0 right-0 z-0 h-200 w-300 object-contain"
             />
-            <nav>
+            <nav className="bg-(--tertiary-color)">
               <Nav />
             </nav>
           </header>
