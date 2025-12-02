@@ -23,7 +23,7 @@ export default function Home() {
               height={300}
               className="h-auto w-full object-cover"
             />
-            <nav>
+            <nav className="bg-(--tertiary-color)">
               <Nav />
             </nav>
           </header>
