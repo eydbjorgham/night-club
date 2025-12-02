@@ -10,15 +10,15 @@ const ubuntu = Ubuntu({
 export default function Home() {
   return (
     <>
-      <body className={ubuntu.className}>
+      <div className={ubuntu.className}>
         <div className="bg-(--primary-color)">
           <header>
             <Image
-              src="/orange-thread.png"
+              src="/assets/bg/header_bg_2.jpg"
               alt="Illustration"
               width={500}
               height={300}
-              className="absolute top-0 right-0 z-0 h-200 w-300 object-contain"
+              className="object-cover w-full h-auto"
             />
             <nav>
               <Nav />
@@ -27,7 +27,7 @@ export default function Home() {
           <main></main>
           <footer></footer>
         </div>
-      </body>
+      </div>
     </>
   );
 }
