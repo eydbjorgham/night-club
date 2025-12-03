@@ -8,7 +8,7 @@ const ubuntu = Ubuntu({
   weight: ["300", "400", "500", "700"],
 });
 
-export default function BookTablePage () {
+export default function ContactUsPage () {
   return (
     <div className={ubuntu.className}>
       <div className="bg-(--primary-color)">
@@ -18,10 +18,10 @@ export default function BookTablePage () {
           </nav>
         </header>
         <main>
-          <Overskrift text="Book Table" />
+          <Overskrift text="Contact us" />
         </main>
         <footer>
-            <Footer />
+          <Footer />
         </footer>
       </div>
     </div>
