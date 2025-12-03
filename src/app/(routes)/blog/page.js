@@ -3,6 +3,7 @@ import Nav from "@/app/components/Nav";
 import Overskrift from "@/app/components/Overskrift";
 import BlogInfo from "@/app/components/BlogInfo";
 import BlogInfoReverse from "@/app/components/BlogInfoReverse";
+import PageSwitch from "@/app/components/PageSwitch";
 import Footer from "@/app/components/Footer";
 
 const ubuntu = Ubuntu({
@@ -27,6 +28,7 @@ export default function BlogPage() {
             <BlogInfo />
             <BlogInfoReverse />
             <BlogInfo />
+            <PageSwitch currentPage={1} />
           </main>
           <footer>
             <Footer />
