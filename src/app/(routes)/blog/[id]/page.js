@@ -2,6 +2,7 @@ import { Ubuntu } from "next/font/google";
 import Overskrift from "@/app/components/Overskrift";
 import Nav from "@/app/components/Nav";
 import BlogPost from "@/app/components/BlogPost";
+import Comments from "@/app/components/Comments";
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -18,6 +19,9 @@ export default function BlogPostPage() {
         </section>
         <section>
             <BlogPost />
+        </section>
+        <section>
+            <Comments />
         </section>
       </div>
     </div>
