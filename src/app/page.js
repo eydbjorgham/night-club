@@ -9,6 +9,8 @@ import Footer from "./components/Footer";
 import SubmitEmail from "./components/SubmitEmail";
 import Staff from "./components/Staff";
 import RecentBlog from "./components/RecentBlog";
+import MusicGallery from "./components/MusicGallery";
+import VideoGallery from "./components/VideoGallery";
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -44,6 +46,14 @@ export default function Home() {
             <section>
               <Overskrift text="Gallery" />
               <Gallery />
+            </section>
+            <section>
+              <Overskrift className="capitalize" text="night club track" />
+              <MusicGallery />
+            </section>
+            <section>
+              <Overskrift className="capitalize" text="latest video" />
+              <VideoGallery />
             </section>
             <section>
               <Overskrift text="Staff" />
