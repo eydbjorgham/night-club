@@ -1,8 +1,8 @@
-import Footer from "@/app/components/Footer";
-import Overskrift from "@/app/components/Overskrift";
-import Nav from "@/app/components/Nav";
 import { Ubuntu } from "next/font/google";
-import Button from "@/app/components/Button";
+import Nav from "@/app/components/Nav";
+import Overskrift from "@/app/components/Overskrift";
+import BlogInfo from "@/app/components/BlogInfo";
+import Footer from "@/app/components/Footer";
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -21,8 +21,8 @@ export default function BlogPage() {
           </header>
           <main>
             <Overskrift text="Blog" />
-
-            <Button text="Read More" href="/blog/post1" />
+            <BlogInfo />
+            
           </main>
           <footer>
             <Footer />
