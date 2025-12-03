@@ -6,7 +6,7 @@ import Welcome from "./components/Welcome";
 import Events from "./components/Events";
 import Gallery from "./components/Gallery";
 import Footer from "./components/Footer";
-
+import SubmitEmail from "./components/SubmitEmail";
 import Staff from "./components/Staff";
 import RecentBlog from "./components/RecentBlog";
 
@@ -52,6 +52,9 @@ export default function Home() {
             <section>
               <Overskrift text="Recent Blog" />
               <RecentBlog />
+            </section>
+            <section>
+              <SubmitEmail />
             </section>
           </main>
           <footer>
