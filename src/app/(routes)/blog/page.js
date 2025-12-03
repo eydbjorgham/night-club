@@ -2,6 +2,7 @@ import { Ubuntu } from "next/font/google";
 import Nav from "@/app/components/Nav";
 import Overskrift from "@/app/components/Overskrift";
 import BlogInfo from "@/app/components/BlogInfo";
+import BlogInfoReverse from "@/app/components/BlogInfoReverse";
 import Footer from "@/app/components/Footer";
 
 const ubuntu = Ubuntu({
@@ -20,9 +21,12 @@ export default function BlogPage() {
             </nav>
           </header>
           <main>
+            <div className="mb-(--section-padding)">
             <Overskrift text="Blog" />
+            </div>
             <BlogInfo />
-            
+            <BlogInfoReverse />
+            <BlogInfo />
           </main>
           <footer>
             <Footer />
