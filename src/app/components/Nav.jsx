@@ -26,7 +26,7 @@ const Nav = () => {
         </li>
         <li>
           <a
-            href="/contact"
+            href="/booktable"
             className="relative pb-2 after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-linear-to-r after:from-black after:via-(--tertiary-color) after:to-black hover:text-(--tertiary-color) hover:after:w-full"
           >
             book table
