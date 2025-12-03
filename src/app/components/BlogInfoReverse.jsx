@@ -1,17 +1,10 @@
 import Image from "next/image";
 import Button from "@/app/components/Button";
 
-const BlogInfo = () => {
+const BlogInfoReverse = () => {
   return (
-    <div className="flex gap-10">
-      <Image
-        src="/assets/content-img/blog_full1.jpg"
-        alt="Illustration"
-        width={600}
-        height={600}
-        className="object-cover w-180 h-100"
-      />
-      <div className="flex flex-col gap-5">
+    <div className="flex justify-between">
+      <div className="flex flex-col gap-5 pl-25 pt-10">
         <h2 className="mt-4 text-2xl font-semibold text-(--secondary-color)">
           Blog Title
         </h2>
@@ -25,8 +18,16 @@ const BlogInfo = () => {
         <Button text="Read More" href="/blog/1" />
         </div>
       </div>
+      
+      <Image
+        src="/assets/content-img/blog_full2.jpg"
+        alt="Illustration"
+        width={600}
+        height={600}
+        className="h-100 w-180 object-cover"
+      />
     </div>
   );
 };
 
-export default BlogInfo;
+export default BlogInfoReverse;
