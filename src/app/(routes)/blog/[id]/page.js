@@ -3,6 +3,8 @@ import Overskrift from "@/app/components/Overskrift";
 import Nav from "@/app/components/Nav";
 import BlogPost from "@/app/components/BlogPost";
 import Comments from "@/app/components/Comments";
+import LeaveComment from "@/app/components/LeaveComment";
+import Footer from "@/app/components/Footer";
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -23,6 +25,12 @@ export default function BlogPostPage() {
         <section>
             <Comments />
         </section>
+        <section>
+            <LeaveComment />
+        </section>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </div>
   );
