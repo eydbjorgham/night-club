@@ -1,10 +1,12 @@
 const Comments = () => {
     return (
-      <div className="m-auto w-[80vw] text-white pb-16">
-        <h1 className="mb-12 mt-8 text-3xl text-white capitalize">3 comments</h1>
+      <div className="m-auto w-[80vw] pb-16 text-white">
+        <h1 className="mt-8 mb-12 text-3xl text-white capitalize">
+          3 comments
+        </h1>
 
-        <div className="w-[70vw]">
-          <h2 className="mb-8">
+        <div className="mb-10 w-[70vw]">
+          <h2 className="mb-6">
             Kevin Parkar -{" "}
             <span className="text-(--tertiary-color)">Posted 03 Jan 2018</span>
           </h2>
@@ -15,8 +17,8 @@ const Comments = () => {
             veniam voluptatem officia alias hic?
           </p>
         </div>
-        <div className="w-[70vw]">
-          <h2 className="mb-8">
+        <div className="mb-10 w-[70vw]">
+          <h2 className="mb-6">
             Kevin Parkar -{" "}
             <span className="text-(--tertiary-color)">Posted 03 Jan 2018</span>
           </h2>
@@ -27,8 +29,8 @@ const Comments = () => {
             veniam voluptatem officia alias hic?
           </p>
         </div>
-        <div className="w-[70vw]">
-          <h2 className="mb-8">
+        <div className="mb-10 w-[70vw]">
+          <h2 className="mb-6">
             Kevin Parkar -{" "}
             <span className="text-(--tertiary-color)">Posted 03 Jan 2018</span>
           </h2>
