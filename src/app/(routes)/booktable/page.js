@@ -2,6 +2,7 @@ import { Ubuntu } from "next/font/google";
 import Nav from "@/app/components/Nav";
 import Overskrift from "@/app/components/Overskrift";
 import Footer from "@/app/components/Footer";
+import BookTable from "@/app/components/BookTable";
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -19,6 +20,7 @@ export default function BookTablePage () {
         </header>
         <main>
           <Overskrift text="Book Table" />
+          <BookTable />
         </main>
         <footer>
             <Footer />
