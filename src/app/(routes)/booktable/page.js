@@ -3,6 +3,7 @@ import Nav from "@/app/components/Nav";
 import Overskrift from "@/app/components/Overskrift";
 import Footer from "@/app/components/Footer";
 import BookTable from "@/app/components/BookTable";
+import BookTableForm from "@/app/components/BookTableForm";
 
 const ubuntu = Ubuntu({
   subsets: ["latin"],
@@ -21,6 +22,7 @@ export default function BookTablePage () {
         <main>
           <Overskrift text="Book Table" />
           <BookTable />
+          <BookTableForm />
         </main>
         <footer>
             <Footer />
