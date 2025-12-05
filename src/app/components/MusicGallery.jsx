@@ -1,7 +1,9 @@
+
+
+
 const MusicGallery = () => {
-    return ( 
+    return (
         <div></div>
-     );
-}
- 
+    )
+};
 export default MusicGallery;
