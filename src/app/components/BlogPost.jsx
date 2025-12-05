@@ -1,47 +1,34 @@
-import React from "react";
-import Image from "next/image";
+"use client";
+import React, { useState, useEffect } from "react";
 
-const BlogPost = () => {
+const BlogPost = ({ id }) => {
+  const [post, setPost] = useState(null);
+
+  useEffect(() => {
+    const fetchPost = async () => {
+      const response = await fetch(`http://localhost:4000/blogposts/${id}`);
+      const data = await response.json();
+      setPost(data);
+    };
+
+    if (id) {
+      fetchPost();
+    }
+  }, [id]);
+
+  if (!post)
+    return <div className="mt-16 text-center text-white">Loading...</div>;
+
   return (
     <section>
-      <img
-        src="/assets/content-img/blog_center3.jpg"
-        alt="blogcenter3img"
-        className="m-auto mt-16"
-      />
-      <h2 className="m-auto w-[80vw] text-white capitalize mt-8">
-        more than 20 years of night club
+      <img src={post.asset.url} alt={post.title} className="m-auto mt-16" />
+      <h2 className="m-auto mt-8 w-[80vw] text-white capitalize">
+        {post.title}
       </h2>
-      <p className="m-auto w-[80vw] text-(--tertiary-color) mt-4">
-        BY: Admin/ 3 Comments / 16 Nov 2018
+      <p className="m-auto mt-4 w-[80vw] text-(--tertiary-color)">
+        BY: {post.author}
       </p>
-      <p className="m-auto w-[80vw] text-white mt-8 pb-8">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia vel
-        repellendus, dignissimos deleniti corporis eius odit magni
-        exercitationem saepe alias impedit explicabo optio culpa debitis, rem
-        molestias animi ad totam. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Quia vel repellendus, dignissimos deleniti corporis
-        eius odit magni exercitationem saepe alias impedit explicabo optio culpa
-        debitis, rem molestias animi ad totam. Lorem ipsum dolor sit amet
-        consectetur adipisicing elit. Quia vel repellendus, dignissimos deleniti
-        corporis eius odit magni exercitationem saepe alias impedit explicabo
-        optio culpa debitis, rem molestias animi ad totam. Lorem ipsum dolor sit
-        amet consectetur adipisicing elit. Quia vel repellendus, dignissimos
-        deleniti corporis eius odit magni exercitationem saepe alias impedit
-        explicabo optio culpa debitis, rem molestias animi ad totam. Lorem ipsum
-        dolor sit amet consectetur adipisicing elit. Quia vel repellendus,
-        dignissimos deleniti corporis eius odit magni exercitationem saepe alias
-        impedit explicabo optio culpa debitis, rem molestias animi ad totam.
-        <br />
-        <br />
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia vel
-        repellendus, dignissimos deleniti corporis eius odit magni
-        exercitationem saepe alias impedit explicabo optio culpa debitis, rem
-        molestias animi ad totam. Lorem ipsum dolor sit amet consectetur
-        adipisicing elit. Quia vel repellendus, dignissimos deleniti corporis
-        eius odit magni exercitationem saepe alias impedit explicabo optio culpa
-        debitis, rem molestias animi ad totam.
-      </p>
+      <p className="m-auto mt-8 w-[80vw] pb-8 text-white">{post.content}</p>
     </section>
   );
 };

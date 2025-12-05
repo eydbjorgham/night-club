@@ -26,8 +26,6 @@ export default function BlogPage() {
             <Overskrift text="Blog" />
             </div>
             <BlogInfo />
-            <BlogInfoReverse />
-            <BlogInfo />
             <PageSwitch currentPage={1} />
           </main>
           <footer>

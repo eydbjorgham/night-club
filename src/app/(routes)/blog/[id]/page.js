@@ -11,7 +11,9 @@ const ubuntu = Ubuntu({
   weight: ["300", "400", "500", "700"],
 });
 
-export default function BlogPostPage() {
+export default async function BlogPostPage({ params }) {
+  const { id } = await params;
+  
   return (
     <div className={ubuntu.className}>
       <div className="bg-(--primary-color)">
@@ -20,13 +22,13 @@ export default function BlogPostPage() {
           <Overskrift className="uppercase" text="blog post" />
         </section>
         <section>
-            <BlogPost />
+          <BlogPost id={id} />
         </section>
         <section>
-            <Comments />
+          <Comments />
         </section>
         <section>
-            <LeaveComment />
+          <LeaveComment />
         </section>
         <footer>
           <Footer />
