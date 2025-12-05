@@ -1,44 +1,40 @@
-import Image from "next/image";
+"use client";
+import { useState, useEffect } from "react";
+
 
 const RecentBlog = () => {
+  const [blogList, setBlogList] = useState([]);
+  const [currentPage, setCurrentPage] = useState(0);
+  const blogPerPage = 1;
+
+  useEffect(() => {
+    const fetchBlog = async () => {
+      const response = await fetch("http://localhost:4000/blogposts");
+      const blogList = await response.json();
+      setBlogList(blogList);
+    };
+    fetchBlog();
+  }, []);
+
+    const displayedBlog = blogList.slice(0, 3);
+
+
   return (
     <div className="mt-(--section-padding) flex justify-center gap-8 leading-8">
-      <div>
-        <Image
-          src="/assets/content-img/blog_full1.jpg"
-          alt="Illustration"
-          width={500}
-          height={500}
+      {displayedBlog.map((blog) =>
+      <div key={blog.id} className="max-w-sm">
+        <img
+          src={blog.asset.url}
+          alt={blog.title}
+          width={300}
+          height={300}
           className="h-auto w-full"
-        />
-        <h2 className="text-lg font-semibold text-(--secondary-color) truncate">Text</h2>
-        <h3 className="text-(--tertiary-color)">Pink text</h3>
-        <p className="text-(--secondary-color)">Longer text</p>
+          />
+        <h2 className="text-lg font-semibold text-(--secondary-color) truncate">{blog.title}</h2>
+        <h3 className="text-(--tertiary-color)">{blog.author}</h3>
+        <p className="text-(--secondary-color) max-w-prose truncate">{blog.content}</p>
       </div>
-      <div>
-        <Image
-          src="/assets/content-img/blog_full2.jpg"
-          alt="Illustration"
-          width={500}
-          height={500}
-          className="h-auto w-full"
-        />
-        <h2 className="text-lg font-semibold text-(--secondary-color) truncate">Text</h2>
-        <h3 className="text-(--tertiary-color)">Pink text</h3>
-        <p className="text-(--secondary-color)">Longer text</p>
-      </div>
-      <div>
-        <Image
-          src="/assets/content-img/blog_full3.jpg"
-          alt="Illustration"
-          width={500}
-          height={500}
-          className="h-auto w-full"
-        />
-        <h2 className="text-lg font-semibold text-(--secondary-color) truncate">Text</h2>
-        <h3 className="text-(--tertiary-color)">Pink text</h3>
-        <p className="text-(--secondary-color)">Longer text</p>
-      </div>
+        )}
     </div>
   );
 };
