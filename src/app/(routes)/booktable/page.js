@@ -15,7 +15,7 @@ export default function BookTablePage () {
     <div className={ubuntu.className}>
       <div className="bg-(--primary-color)">
         <header>
-          <nav>
+          <nav className="bg-(--tertiary-color)">
             <Nav />
           </nav>
         </header>
@@ -25,7 +25,7 @@ export default function BookTablePage () {
           <BookTableForm />
         </main>
         <footer>
-            <Footer />
+          <Footer />
         </footer>
       </div>
     </div>

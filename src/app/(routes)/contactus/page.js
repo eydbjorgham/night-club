@@ -13,7 +13,7 @@ export default function ContactUsPage () {
     <div className={ubuntu.className}>
       <div className="bg-(--primary-color)">
         <header>
-          <nav>
+          <nav className="bg-(--tertiary-color)">
             <Nav />
           </nav>
         </header>
