@@ -19,8 +19,8 @@ export default async function BlogPostPage({ params }) {
       <div className="bg-(--primary-color)">
         <nav className="bg-(--tertiary-color)">
           <Nav />
-          <Overskrift className="uppercase" text="blog post" />
         </nav>
+        <Overskrift className="uppercase" text="blog post" />
         <section>
           <BlogPost id={id} />
         </section>
