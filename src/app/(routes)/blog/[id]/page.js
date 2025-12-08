@@ -17,10 +17,10 @@ export default async function BlogPostPage({ params }) {
   return (
     <div className={ubuntu.className}>
       <div className="bg-(--primary-color)">
-        <section>
+        <nav className="bg-(--tertiary-color)">
           <Nav />
           <Overskrift className="uppercase" text="blog post" />
-        </section>
+        </nav>
         <section>
           <BlogPost id={id} />
         </section>

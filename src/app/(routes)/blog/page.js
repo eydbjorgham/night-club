@@ -17,13 +17,13 @@ export default function BlogPage() {
       <div className={ubuntu.className}>
         <div className="bg-(--primary-color)">
           <header>
-            <nav>
+            <nav className="bg-(--tertiary-color)">
               <Nav />
             </nav>
           </header>
           <main>
             <div className="mb-(--section-padding)">
-            <Overskrift text="Blog" />
+              <Overskrift text="Blog" />
             </div>
             <BlogInfo />
             <PageSwitch currentPage={1} />
