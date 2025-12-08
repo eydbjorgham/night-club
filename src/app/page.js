@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { Ubuntu } from "next/font/google";
+import Hero from "./components/Hero";
 import Nav from "@/app/components/Nav";
 import Overskrift from "./components/Overskrift";
 import Welcome from "./components/Welcome";
@@ -23,13 +23,7 @@ export default function Home() {
       <div className={ubuntu.className}>
         <div className="bg-(--primary-color)">
           <header>
-            <Image
-              src="/assets/bg/header_bg_2.jpg"
-              alt="Illustration"
-              width={500}
-              height={300}
-              className="h-auto w-full object-cover"
-            />
+            <Hero />
             <nav className="bg-(--tertiary-color)">
               <Nav />
             </nav>
