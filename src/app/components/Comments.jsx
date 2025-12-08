@@ -1,48 +1,38 @@
-const Comments = () => {
-    return (
-      <div className="m-auto w-[80vw] pb-16 text-white">
-        <h1 className="mt-8 mb-12 text-3xl text-white capitalize">
-          3 comments
-        </h1>
+"use client";
+import { useState, useEffect } from "react";
 
-        <div className="mb-10 w-[70vw]">
-          <h2 className="mb-6">
-            Kevin Parkar -{" "}
-            <span className="text-(--tertiary-color)">Posted 03 Jan 2018</span>
+const Comments = () => {
+  const [comments, setComments] = useState([]);
+
+  useEffect(() => {
+    const fetchComments = async () => {
+      const response = await fetch("http://localhost:4000/comments");
+      const data = await response.json();
+      setComments(data);
+    };
+
+    fetchComments();
+  }, []);
+
+  return (
+    <div className="m-auto w-[80vw] pb-16 text-white">
+      <h1 className="mt-8 mb-12 text-3xl text-white capitalize">
+        {comments.length} comments
+      </h1>
+
+      {comments.map((comment) => (
+        <div key={comment.id} className="mb-10 w-[70vw]">
+          <h2 className="mb-6 text-xl text-white">
+            {comment.name} -{" "}
+            <span className="text-(--tertiary-color)">
+              Posted {comment.date.substring(0, 10)}
+            </span>
           </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-            voluptate quaerat repellendus accusamus hic reprehenderit adipisci
-            praesentium debitis sequi fuga. Impedit doloribus quas porro dicta
-            veniam voluptatem officia alias hic?
-          </p>
+          <p>{comment.content}</p>
         </div>
-        <div className="mb-10 w-[70vw]">
-          <h2 className="mb-6">
-            Kevin Parkar -{" "}
-            <span className="text-(--tertiary-color)">Posted 03 Jan 2018</span>
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-            voluptate quaerat repellendus accusamus hic reprehenderit adipisci
-            praesentium debitis sequi fuga. Impedit doloribus quas porro dicta
-            veniam voluptatem officia alias hic?
-          </p>
-        </div>
-        <div className="mb-10 w-[70vw]">
-          <h2 className="mb-6">
-            Kevin Parkar -{" "}
-            <span className="text-(--tertiary-color)">Posted 03 Jan 2018</span>
-          </h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-            voluptate quaerat repellendus accusamus hic reprehenderit adipisci
-            praesentium debitis sequi fuga. Impedit doloribus quas porro dicta
-            veniam voluptatem officia alias hic?
-          </p>
-        </div>
-      </div>
-    );
-}
- 
+      ))}
+    </div>
+  );
+};
+
 export default Comments;
