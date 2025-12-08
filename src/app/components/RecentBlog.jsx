@@ -4,8 +4,7 @@ import { useState, useEffect } from "react";
 
 const RecentBlog = () => {
   const [blogList, setBlogList] = useState([]);
-  const [currentPage, setCurrentPage] = useState(0);
-  const blogPerPage = 1;
+
 
   useEffect(() => {
     const fetchBlog = async () => {
