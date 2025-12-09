@@ -18,7 +18,7 @@ const Hero = () => {
       <motion.div
         initial={{ opacity: 1 }}
         animate={{ opacity: isLoading ? 1 : 0 }}
-        transition={{ duration: 0.2 }}
+        transition={{ duration: 0.1 }}
         className="absolute inset-0 flex items-center justify-center bg-black"
       >
         <Image
