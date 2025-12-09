@@ -45,7 +45,7 @@ const Gallery = () => {
               key={image.id}
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1.5, delay: index * 0.1 }}
+              transition={{ duration: 1, delay: index * 0.1, ease: "easeOut" }}
               className="group relative overflow-hidden"
               onClick={() => openLightbox(image, index)}
             >
@@ -72,7 +72,7 @@ const Gallery = () => {
               key={image.id}
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 1.5, delay: index * 0.1 }}
+              transition={{ duration: 1, delay: index * 0.1, ease: "easeOut" }}
               className="group relative overflow-hidden"
               onClick={() => openLightbox(image, index)}
             >
@@ -116,11 +116,13 @@ const Gallery = () => {
 
             {/* Billede + tekst */}
             <div className="flex flex-col gap-4">
+              <div className="bg-(--tertiary-color)">
               <img
                 src={selectedImage.asset.url}
                 alt={selectedImage.alt}
-                className="max-h-96 w-auto"
+                className="max-h-96 w-auto img-border"
               />
+              </div>
               <h2 className="text-xl font-bold text-(--secondary-color)">
                 Night club party
               </h2>
