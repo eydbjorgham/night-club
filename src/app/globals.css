@@ -11,8 +11,7 @@
   --section-padding: 3em;
   --padding: 2em;
 
-  /* BORDER 1 */
-  --border-1: border 1px solid var(--tertiary-color);
+
 }
 /* 
 @theme inline {
