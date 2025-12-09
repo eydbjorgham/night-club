@@ -22,12 +22,12 @@ export default function Home() {
     <>
       <div className={ubuntu.className}>
         <div className="bg-(--primary-color)">
-          <header>
+          
             <Hero />
-            <nav className="bg-(--tertiary-color)">
+            <nav className="sticky top-0 z-50 bg-(--tertiary-color)">
               <Nav />
             </nav>
-          </header>
+          
           <main>
             <section>
               <Overskrift text="Welcome in nightclub" />

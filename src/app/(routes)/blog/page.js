@@ -16,11 +16,9 @@ export default function BlogPage() {
     <>
       <div className={ubuntu.className}>
         <div className="bg-(--primary-color)">
-          <header>
-            <nav className="bg-(--tertiary-color)">
-              <Nav />
-            </nav>
-          </header>
+          <nav className="sticky top-0 z-50 bg-(--tertiary-color)">
+            <Nav />
+          </nav>
           <main>
             <div className="mb-(--section-padding)">
               <Overskrift text="Blog" />
