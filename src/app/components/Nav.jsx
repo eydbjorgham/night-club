@@ -1,6 +1,6 @@
 const Nav = () => {
   return (
-    <nav className="flex justify-evenly border border-(--tertiary-color) bg-black p-4 text-white uppercase [clip-path:polygon(30px_0,100%_0,100%_calc(100%-30px),calc(100%-30px)_100%,0_100%,0_30px)]">
+    <nav className="flex justify-evenly main-border bg-black p-4 text-white uppercase">
       <div className="">
         <h1 className="text-3xl">
           night<span className="text-(--tertiary-color)">club</span>
