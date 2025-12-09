@@ -17,11 +17,9 @@ export default function BookTablePage() {
   return (
     <div className={ubuntu.className}>
       <div className="bg-(--primary-color)">
-        <header>
-          <nav className="bg-(--tertiary-color)">
-            <Nav />
-          </nav>
-        </header>
+        <nav className="sticky top-0 z-50 bg-(--tertiary-color)">
+          <Nav />
+        </nav>
         <main>
           <Overskrift text="Book Table" />
           <BookTable onTableSelect={setSelectedTable} />

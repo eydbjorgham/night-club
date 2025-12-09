@@ -17,7 +17,7 @@ export default async function BlogPostPage({ params }) {
   return (
     <div className={ubuntu.className}>
       <div className="bg-(--primary-color)">
-        <nav className="bg-(--tertiary-color)">
+        <nav className="sticky top-0 z-50 bg-(--tertiary-color)">
           <Nav />
         </nav>
         <Overskrift className="uppercase" text="blog post" />
