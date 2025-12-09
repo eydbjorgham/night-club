@@ -50,7 +50,7 @@ const Hero = () => {
         <motion.div
           initial={{ opacity: 0, rotateX: 90 }}
           animate={{ opacity: isLoading ? 0 : 1, rotateX: isLoading ? 90 : 0 }}
-          transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
+          transition={{ duration: 1.2, delay: 0.5, ease: "backInOut" }}
           className="flex items-center justify-center"
           style={{ perspective: 800 }}
         >
