@@ -2,7 +2,6 @@ import { Ubuntu } from "next/font/google";
 import Nav from "@/app/components/Nav";
 import Overskrift from "@/app/components/Overskrift";
 import BlogInfo from "@/app/components/BlogInfo";
-import BlogInfoReverse from "@/app/components/BlogInfoReverse";
 import PageSwitch from "@/app/components/PageSwitch";
 import Footer from "@/app/components/Footer";
 
