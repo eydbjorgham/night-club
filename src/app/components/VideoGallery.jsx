@@ -23,13 +23,13 @@ console.log(currentIndex);
 
   return (
     <section className="mt-8 mb-16">
-      <div className="m-auto flex w-[60vw] justify-center bg-(--tertiary-color)">
+      <div className="sm:m-auto flex sm:w-[60vw] justify-center bg-(--tertiary-color)">
         <video
           key={currentIndex}
           autoPlay
           loop
           muted
-          className="m-auto w-[60vw] [clip-path:polygon(30px_0,100%_0,100%_calc(100%-30px),calc(100%-30px)_100%,0_100%,0_30px)]"
+          className="m-auto w-screen object-contain sm:w-[60vw] [clip-path:polygon(30px_0,100%_0,100%_calc(100%-30px),calc(100%-30px)_100%,0_100%,0_30px)]"
           src={videoer[currentIndex]}
         ></video>
       </div>

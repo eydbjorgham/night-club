@@ -6,14 +6,14 @@ import { PiCheersBold } from "react-icons/pi";
 
 const Welcome = () => {
   return (
-    <div className="mt-(--section-padding) flex justify-center gap-8">
+    <div className="mt-(--section-padding) flex flex-col items-center gap-8 sm:flex-row sm:justify-center">
       <div className="group relative">
         <Image
           src="/assets/content-img/thumb1.jpg"
           alt="Illustration"
           width={300}
           height={300}
-          className=""
+          className="w-110 sm:h-full sm:w-90"
         />
         <div className="absolute inset-0 bg-(--tertiary-color) opacity-0 group-hover:opacity-100"></div>
 
@@ -50,7 +50,7 @@ const Welcome = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h1 className="text-center uppercase">night club</h1>
+            <h1 className="text-center font-semibold uppercase">night club</h1>
           </motion.div>
 
           {/*P-tekst*/}
@@ -60,10 +60,10 @@ const Welcome = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-2 mr-4 mb-8 ml-4 text-center"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-            impedit vel, exercitationem laudantium obcaecati dicta. Debitis
-
-
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour, or randomised words which don't look even slightly
+            believable.
           </motion.p>
         </motion.div>
       </div>
@@ -73,7 +73,7 @@ const Welcome = () => {
           alt="Illustration"
           width={300}
           height={300}
-          className=""
+          className="w-110 sm:h-full sm:w-90"
         />
 
         <div className="absolute inset-0 bg-(--tertiary-color) opacity-0 group-hover:opacity-100"></div>
@@ -90,7 +90,6 @@ const Welcome = () => {
           transition={{ duration: 0.2 }}
           className="absolute top-0 left-0 hidden h-full w-full flex-col justify-evenly border-t border-b border-(--tertiary-color) bg-black text-white group-hover:flex"
         >
-
           {/*Icon*/}
           <motion.div
             initial={{ scale: 0.7 }}
@@ -109,7 +108,7 @@ const Welcome = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h1 className="text-center uppercase">restaurant</h1>
+            <h1 className="text-center font-semibold uppercase">restaurant</h1>
           </motion.div>
 
           {/*P-tekst*/}
@@ -119,9 +118,10 @@ const Welcome = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-2 mr-4 mb-8 ml-4 text-center"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-            impedit vel, exercitationem laudantium obcaecati dicta. Debitis
-
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour, or randomised words which don't look even slightly
+            believable.
           </motion.p>
         </motion.div>
       </div>
@@ -131,7 +131,7 @@ const Welcome = () => {
           alt="Illustration"
           width={300}
           height={300}
-          className=""
+          className="w-110 sm:h-full sm:w-90"
         />
         <div className="absolute inset-0 bg-(--tertiary-color) opacity-0 group-hover:opacity-100"></div>
 
@@ -147,7 +147,6 @@ const Welcome = () => {
           transition={{ duration: 0.2 }}
           className="absolute top-0 left-0 hidden h-full w-full flex-col justify-evenly border-t border-b border-(--tertiary-color) bg-black text-white group-hover:flex"
         >
-
           {/*Icon*/}
           <motion.div
             initial={{ scale: 0.7 }}
@@ -166,7 +165,7 @@ const Welcome = () => {
             whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <h1 className="text-center uppercase">bar</h1>
+            <h1 className="text-center font-semibold uppercase">bar</h1>
           </motion.div>
 
           {/*P-tekst*/}
@@ -176,9 +175,10 @@ const Welcome = () => {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="mt-2 mr-4 mb-8 ml-4 text-center"
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-            impedit vel, exercitationem laudantium obcaecati dicta. Debitis
-
+            There are many variations of passages of Lorem Ipsum available, but
+            the majority have suffered alteration in some form, by injected
+            humour, or randomised words which don't look even slightly
+            believable.
           </motion.p>
         </motion.div>
       </div>

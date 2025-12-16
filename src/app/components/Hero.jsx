@@ -13,8 +13,9 @@ const Hero = () => {
   }, []);
 
   return (
+    <section className="">
     <div className="relative h-155 w-full">
-      {/* Loading state - fade out */}
+      {/* Loading state med madbars.gif */}
       <motion.div
         initial={{ opacity: 1 }}
         animate={{ opacity: isLoading ? 1 : 0 }}
@@ -26,10 +27,11 @@ const Hero = () => {
           alt="Loading"
           width={50}
           height={50}
+          
         />
       </motion.div>
 
-      {/* Hero image - fade in */}
+      {/* Hero image */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: isLoading ? 0 : 1 }}
@@ -45,8 +47,10 @@ const Hero = () => {
         />
       </motion.div>
 
-      {/* Wrapper for logo + tekst - flex-col stiller dem vertikalt */}
-      <motion.div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
+      {/* Wrapper for logo + tekst, flex-col stiller dem vertikalt */}
+      <motion.div 
+      className="absolute inset-0 flex flex-col items-center justify-center gap-2 sm:items-center">
+        
         <motion.div
           initial={{ opacity: 0, rotateX: 90 }}
           animate={{ opacity: isLoading ? 0 : 1, rotateX: isLoading ? 90 : 0 }}
@@ -59,7 +63,7 @@ const Hero = () => {
             alt="Logo"
             width={200}
             height={200}
-            className="h-auto w-150"
+            className="w-110 h-auto sm:w-150"
           />
         </motion.div>
 
@@ -67,9 +71,9 @@ const Hero = () => {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: isLoading ? 0 : 1, y: isLoading ? -100 : 0 }}
           transition={{ duration: 1, delay: 1 }}
-          className="flex flex-col items-center justify-center gap-4"
+          className="flex flex-col items-center justify-center gap-2 sm:gap-4"
         >
-          <h2 className="text-2xl tracking-[0.7em] text-(--secondary-color) uppercase">
+          <h2 className="text-lg sm:text-2xl tracking-[0.7em] text-(--secondary-color) uppercase">
             Have a good time
           </h2>
 
@@ -83,6 +87,8 @@ const Hero = () => {
         </motion.div>
       </motion.div>
     </div>
+
+    </section>
   );
 };
 

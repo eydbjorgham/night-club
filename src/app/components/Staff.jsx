@@ -36,10 +36,10 @@ const Staff = () => {
             width={150}
             height={150}
           />
-          <h2 className="font-semibold text-(--secondary-color)">
+          <h2 className="font-semibold text-xl text-(--secondary-color)">
             {staff.name}
           </h2>
-          <p className="max-w-4xl text-center leading-10 text-(--secondary-color)">
+          <p className="max-w-sm sm:max-w-3xl text-center leading-10 text-(--secondary-color)">
             {staff.content}
           </p>
           <div className="mt-4 flex justify-center gap-4">

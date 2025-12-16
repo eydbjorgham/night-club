@@ -39,7 +39,7 @@ const Gallery = () => {
   return (
     <>
       <div className="mt-(--padding)">
-        <div className="grid grid-cols-4">
+        <div className="flex flex-col items-center sm:grid sm:grid-cols-4">
           {images.slice(0, 4).map((image, index) => (
             <motion.div
               key={image.id}
@@ -58,7 +58,7 @@ const Gallery = () => {
                 alt={image.alt}
                 width={400}
                 height={300}
-                className="h-50 object-cover group-hover:[clip-path:polygon(30px_0,100%_0,100%_calc(100%-30px),calc(100%-30px)_100%,0_100%,0_30px)]"
+                className="h-50 w-200 object-cover group-hover:[clip-path:polygon(30px_0,100%_0,100%_calc(100%-30px),calc(100%-30px)_100%,0_100%,0_30px)]"
               />
               {/* Hover overlay */}
               <div className="absolute inset-0 cursor-pointer bg-black opacity-0 transition-opacity duration-300 group-hover:border-2 group-hover:border-(--tertiary-color) group-hover:opacity-40 group-hover:[clip-path:polygon(30px_0,100%_0,100%_calc(100%-30px),calc(100%-30px)_100%,0_100%,0_30px)]"></div>
@@ -66,7 +66,7 @@ const Gallery = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-3">
+        <div className="sm:grid sm:grid-cols-3">
           {images.slice(4, 7).map((image, index) => (
             <motion.div
               key={image.id}
@@ -115,18 +115,18 @@ const Gallery = () => {
             </button>
 
             {/* Billede + tekst */}
-            <div className="flex flex-col gap-4">
+            <div className="flex flex-col gap-4 ml-4">
               <div className="bg-(--tertiary-color)">
               <img
                 src={selectedImage.asset.url}
                 alt={selectedImage.alt}
-                className="max-h-96 w-auto img-border"
+                className="max-h-96 max-w-lg w-auto img-border"
               />
               </div>
-              <h2 className="text-xl font-bold text-(--secondary-color)">
+              <h2 className="text-md sm:text-xl ml-5 font-bold text-(--secondary-color)">
                 Night club party
               </h2>
-              <p className="max-w-lg text-sm text-gray-300">
+              <p className="line-clamp-4 max-w-md ml-5 leading-5 sm:max-w-lg text-xs sm:text-sm text-gray-300">
                 There are many variations of passages of Lorem Ipsum available,
                 but the majority have suffered alteration in some form, by
                 injected humour, or randomised words which don't look even
@@ -138,7 +138,7 @@ const Gallery = () => {
               </p>
 
               {/* Button */}
-              <div className="place-self-end">
+              <div className="place-self-end mr-5">
                 <Button text="Read more" href="/gallery" />
               </div>
             </div>
