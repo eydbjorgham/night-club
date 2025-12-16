@@ -3,7 +3,7 @@ import Link from "next/link";
 const Button = ({ text, href = "#" }) => {
   return (
     <Link href={href}>
-      <div className="border-t-2 border-b-2 border-(--secondary-color) px-16 py-4 text-(--secondary-color) hover:bg-(--secondary-color) hover:text-black transition-all duration-300 ease-in-out cursor-pointer w-max">
+      <div className="border-t-2 border-b-2 border-(--secondary-color) px-8 py-2 sm:px-16 sm:py-4 text-(--secondary-color) hover:bg-(--secondary-color) hover:text-black transition-all duration-300 ease-in-out cursor-pointer w-max">
         {text}
       </div>
     </Link>

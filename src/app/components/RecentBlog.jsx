@@ -19,9 +19,9 @@ const RecentBlog = () => {
 
 
   return (
-    <div className="mt-(--section-padding) flex justify-center gap-8 leading-8">
+    <div className="mt-(--section-padding) flex flex-col items-center sm:flex-row justify-center gap-8 leading-8">
       {displayedBlog.map((blog) =>
-      <div key={blog.id} className="max-w-sm">
+      <div key={blog.id} className="max-w-md sm:max-w-sm">
         <img
           src={blog.asset.url}
           alt={blog.title}

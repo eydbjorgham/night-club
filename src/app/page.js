@@ -32,32 +32,25 @@ export default function Home() {
             <section>
               <Overskrift text="Welcome in nightclub" />
               <Welcome />
-            </section>
-            <section>
+            
               <Overskrift text="Events of the month" />
               <Events />
-            </section>
-            <section>
+            
               <Overskrift text="Gallery" />
               <Gallery />
-            </section>
-            <section>
+           
               <Overskrift className="capitalize" text="night club track" />
               <MusicGallery />
-            </section>
-            <section>
+            
               <Overskrift className="capitalize" text="latest video" />
               <VideoGallery />
-            </section>
-            <section>
-              <Overskrift text="Staff" />
+            
+              
               <Staff />
-            </section>
-            <section>
+            
               <Overskrift text="Recent Blog" />
               <RecentBlog />
-            </section>
-            <section>
+            
               <SubmitEmail />
             </section>
           </main>
