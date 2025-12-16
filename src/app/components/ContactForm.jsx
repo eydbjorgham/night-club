@@ -48,7 +48,7 @@ const ContactForm = () => {
         <form
           onSubmit={handleSubmit(onSubmit)}
           noValidate
-          className="flex flex-1 flex-col gap-4 text-white"
+          className="flex w-full flex-1 flex-col gap-4 text-white items-center"
         >
           <div>
             {errors.username && (
@@ -56,19 +56,19 @@ const ContactForm = () => {
                 {errors.username.message}
               </p>
             )}
+
             <input
               type="name"
-              action="input"
               id="name"
               {...register("username", {
                 required: "Please enter a valid name",
                 pattern: {
                   value: /^[A-Za-z\s]+$/,
                   message: "Name can only contain letters and spaces",
-                }
+                },
               })}
               placeholder="Your Name"
-              className="input:text-white w-120 border border-white bg-transparent p-4 outline-none placeholder:text-white"
+              className="input:text-white w-110 sm:w-120 border border-white bg-transparent p-4 outline-none placeholder:text-white"
             />
           </div>
 
@@ -78,6 +78,7 @@ const ContactForm = () => {
                 {errors.email.message}
               </p>
             )}
+
             <input
               type="email"
               id="email"
@@ -89,7 +90,7 @@ const ContactForm = () => {
                 },
               })}
               placeholder="Your Email"
-              className="input:text-white w-120 border border-white bg-transparent p-4 outline-none placeholder:text-white"
+              className="input:text-white w-110 sm:w-120 border border-white bg-transparent p-4 outline-none placeholder:text-white"
             />
           </div>
 
@@ -99,20 +100,20 @@ const ContactForm = () => {
                 {errors.comment.message}
               </p>
             )}
+
             <textarea
-              action="input"
               id="comment"
               type="text"
               {...register("comment", {
                 required: "Please enter a valid comment",
               })}
               placeholder="Your Comment"
-              className="w-full resize border border-white bg-transparent p-2 pt-6 pb-30 pl-4 text-white outline-none placeholder:text-white"
+              className="w-110 sm:w-120 resize border border-white bg-transparent p-2 pt-6 pb-60 pl-4 text-white outline-none placeholder:text-white sm:pb-30"
               rows="4"
             ></textarea>
           </div>
           <DevTool control={control} />
-          <div className="col-start-2 row-start-2 row-end-2 mt-4 grid justify-end">
+          <div className="col-start-2 row-start-2 row-end-2 mt-4 grid place-self-end">
             <button
               disabled={isSubmitting}
               className="w-max cursor-pointer border-t-2 border-b-2 border-(--secondary-color) px-16 py-4 text-(--secondary-color) capitalize transition-all duration-300 ease-in-out hover:bg-(--secondary-color) hover:text-black"
@@ -127,9 +128,7 @@ const ContactForm = () => {
               </p>
             )}
             {errorMessage && (
-              <p className="mt-4 text-center text-red-500">
-                {errorMessage}
-              </p>
+              <p className="mt-4 text-center text-red-500">{errorMessage}</p>
             )}
           </div>
         </form>
