@@ -4,6 +4,7 @@ import Image from "next/image";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa";
 import { FaSnapchatGhost } from "react-icons/fa";
+import Link from "next/link";
 
 const Footer = () => {
   const [blogPosts, setBlogPosts] = useState([]);
@@ -19,26 +20,27 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="m-auto mt-16 w-[90%] pb-16">
+    <footer className="m-auto mt-16 w-[90%] pb-16 max-sm:flex-col">
       <div className="space-between flex gap-4">
-        <div className="flex flex-1 flex-col justify-evenly text-white uppercase">
-          <h1 className="text-3xl">
-            night<span className="text-(--tertiary-color)">club</span>
-          </h1>
-          <p className="text-[0.6em] tracking-[0.5em]">have a good time</p>
-          <h2 className="text-(--tertiary-color)">location</h2>
-          <p>
-            Kompagnistræde 278 <br />
-            1265 København K
-          </p>
-          <h2 className="text-(--tertiary-color)">opening hours</h2>
-          <p>
-            wed - thu: 10:30 pm to 3 am <br />
-            sat - sun: 11 pm to 5 am
-          </p>
+        <div className="flex flex-1 flex-col justify-evenly text-white uppercase max-sm:gap-12 max-sm:text-center">
+          <Link href="/">
+            <img className="max-sm:m-auto" src="assets/Logo.png" alt="logo" />
+          </Link>
+          <div className="">
+            <h2 className="text-(--tertiary-color) max-sm:mb-4">location</h2>
+            <p>Kompagnistræde 278</p>
+            <p> 1265 København K</p>
+          </div>
+          <div>
+            <h2 className="text-(--tertiary-color) max-sm:mb-4">
+              opening hours
+            </h2>
+            <p>wed - thu: 10:30 pm to 3 am</p>
+            <p> sat - sun: 11 pm to 5 am</p>
+          </div>
         </div>
 
-        <div className="flex-1">
+        <div className="flex-1 max-sm:hidden">
           <h2 className="mb-8 text-(--tertiary-color) uppercase">
             recent posts
           </h2>
@@ -62,7 +64,7 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="flex-1">
+        <div className="flex-1 max-sm:hidden">
           <h2 className="mb-8 text-(--tertiary-color) uppercase">
             recent posts
           </h2>
@@ -96,11 +98,15 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="mt-32 flex text-white">
+      <div className="mt-32 max-sm:mt-24 flex text-white max-sm:flex-col max-sm:gap-8">
         <div className="flex-1 place-items-center">
-          <p>Night Club PSD Template - All Rights Reserved</p>
+          <div className="flex max-sm:flex-col gap-2 max-sm:text-center">
+            <p>Night Club PSD Template </p>
+            <p className="max-sm:hidden"> - </p>
+            <p>All Rights Reserved</p>
+          </div>
         </div>
-        <div className="m-auto flex-1 place-items-center capitalize">
+        <div className="m-auto flex-1 place-items-center capitalize max-sm:order-first">
           <p className="place-self-center">stay connected with us </p>
           <div className="mt-4 flex justify-center gap-4">
             <div className="border-2 border-white p-2">
