@@ -10,7 +10,7 @@ const BookTableForm = ({ selectedTable }) => {
       number: "",
     },
   });
-  const { register, control, handleSubmit, formState, setValue } = form;
+  const { register, handleSubmit, formState, setValue } = form;
   const { errors, isSubmitting } = formState;
 
   useEffect(() => {
@@ -61,7 +61,7 @@ const BookTableForm = ({ selectedTable }) => {
         action="input"
         onSubmit={handleSubmit(onSubmit)}
         noValidate
-        className="grid grid-cols-2 grid-rows-3 gap-4 text-white"
+        className="grid grid-cols-2 max-sm:flex max-sm:flex-col grid-rows-3 gap-4 text-white"
       >
         <div>
           {errors.name && (
