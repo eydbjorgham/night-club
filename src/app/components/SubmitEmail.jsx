@@ -18,20 +18,20 @@ const onSubmit = (data) => {
 
     return (
       <section className="mt-16 flex flex-col items-center text-white">
-        <h1 className="uppercase">want the latest night club news</h1>
+        <h1 className="uppercase font-bold text-2xl mb-8 max-sm:mb-4">want the latest night club news</h1>
         <p>
           Subscribe to our newsletter to never miss an{" "}
           <a href="" className="text-(--tertiary-color) capitalize">
             event
           </a>
         </p>
-        <div className="mt-8 flex w-[40%] items-center justify-between gap-4">
+        <div className="mt-8 flex w-[40%] max-sm:flex-col items-center justify-between gap-4">
           
           <form
             action="input"
             onSubmit={handleSubmit(onSubmit)}
             noValidate
-            className="mt-4 flex gap-4 text-white"
+            className="mt-4 flex max-sm:flex-col max-sm:gap-12 gap-4 text-white"
           >
 
             <input
@@ -53,7 +53,7 @@ const onSubmit = (data) => {
             )}
 
             <button
-              className="w-max cursor-pointer border-t-2 border-b-2 border-(--secondary-color) px-16 py-4 text-(--secondary-color) transition-all duration-300 ease-in-out hover:bg-(--secondary-color) hover:text-black"
+              className="w-max max-sm:self-center cursor-pointer border-t-2 border-b-2 border-(--secondary-color) px-16 py-4 text-(--secondary-color) transition-all duration-300 ease-in-out hover:bg-(--secondary-color) hover:text-black"
               type="submit"
             >
               Subscribe
