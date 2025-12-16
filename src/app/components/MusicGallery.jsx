@@ -137,19 +137,19 @@ export default function MusicGallery() {
         onTimeUpdate={handleTimeUpdate}
         onLoadedMetadata={handleLoadedMetadata}
       />
-      <div className="m-auto flex w-[80%]">
+      <div className="m-auto flex w-[80%] max-sm:flex-col">
         <div>
           <img
             src={activeImage}
             alt="Active track"
-            className="h-auto w-auto object-cover"
+            className="h-auto w-auto object-cover max-sm:hidden"
           />
         </div>
-        <div className="m-auto w-full align-middle">
-          <div className="mr-10 mb-2 text-center text-white">
+        <div className="m-auto w-full align-middle max-sm:order-first">
+          <div className="mr-10 mb-2 text-center text-white max-sm:mr-0">
             <h3 className="text-lg font-semibold">{activeText}</h3>
           </div>
-          <div className="relative m-auto mb-4 h-1 w-[80%] rounded-full bg-(--tertiary-color)">
+          <div className="relative m-auto mb-4 h-1 w-[80%] rounded-full bg-(--tertiary-color) max-sm:w-[100%]">
             <div
               className="absolute h-full bg-white transition-all duration-300"
               style={{ width: `${progressPercent}%` }}
@@ -162,7 +162,7 @@ export default function MusicGallery() {
               }}
             />
           </div>
-          <div className="flex justify-evenly">
+          <div className="flex justify-evenly max-sm:flex-col max-sm:gap-6">
             <div className="mb-4 flex flex-1 justify-center gap-2 text-sm text-white">
               <span>{formatTime(currentTime)}</span>
               <span>/</span>
@@ -213,16 +213,10 @@ export default function MusicGallery() {
           </div>
         </div>
       </div>
-      <div className="m-auto mt-8 flex justify-center">
-        <button
-          onClick={handlePrevTrack}
-          className="m-4 h-14 w-14 cursor-pointer self-center border-2 border-white text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-black"
-        >
-          <IoMdArrowDropleft size={40} className="m-auto" />
-        </button>
-        <div className="flex bg-(--tertiary-color)">
+      <div className="m-auto mt-8 flex justify-center max-sm:flex-col max-sm:items-center max-sm:gap-4">
+        <div className="flex bg-(--tertiary-color) max-sm:flex-col max-sm:order-first">
           <div
-            className={`group relative hover:[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)] ${activeImage === "/assets/content-img/track_thumb.jpg" ? "[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)]" : ""}`}
+            className={`group relativehover:[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)] ${activeImage === "/assets/content-img/track_thumb.jpg" ? "[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)]" : ""} ${activeImage === "/assets/content-img/track_thumb.jpg" ? "max-sm:block" : "max-sm:hidden"} max-sm:m-auto`}
           >
             <img
               src="/assets/content-img/track_thumb.jpg"
@@ -256,12 +250,12 @@ export default function MusicGallery() {
             </h3>
           </div>
           <div
-            className={`group relative hover:[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)] ${activeImage === "/assets/content-img/track1.jpg" ? "[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)]" : ""}`}
+            className={`group relative hover:[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)] ${activeImage === "/assets/content-img/track1.jpg" ? "[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)]" : ""} ${activeImage === "/assets/content-img/track1.jpg" ? "max-sm:block" : "max-sm:hidden"} max-sm:m-auto`}
           >
             <img
               src="/assets/content-img/track1.jpg"
               alt=""
-              className="cursor-pointer"
+              className="cursor-pointer max-sm:w-screen"
             />
             <div
               className={`absolute inset-0 hidden items-center justify-center group-hover:flex ${activeImage === "/assets/content-img/track1.jpg" ? "flex!" : ""}`}
@@ -290,12 +284,12 @@ export default function MusicGallery() {
             </h3>
           </div>
           <div
-            className={`group relative hover:[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)] ${activeImage === "/assets/content-img/track2.jpg" ? "[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)]" : ""}`}
+            className={`group relative hover:[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)] ${activeImage === "/assets/content-img/track2.jpg" ? "[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)]" : ""} ${activeImage === "/assets/content-img/track2.jpg" ? "max-sm:block" : "max-sm:hidden"} max-sm:m-auto`}
           >
             <img
               src="/assets/content-img/track2.jpg"
               alt=""
-              className="cursor-pointer"
+              className="cursor-pointer max-sm:w-screen"
             />
             <div
               className={`absolute inset-0 hidden items-center justify-center group-hover:flex ${activeImage === "/assets/content-img/track2.jpg" ? "flex!" : ""}`}
@@ -324,12 +318,12 @@ export default function MusicGallery() {
             </h3>
           </div>
           <div
-            className={`group relative hover:[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)] ${activeImage === "/assets/content-img/track4.jpg" ? "[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)]" : ""}`}
+            className={`group relative hover:[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)] ${activeImage === "/assets/content-img/track4.jpg" ? "[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)]" : ""} ${activeImage === "/assets/content-img/track4.jpg" ? "max-sm:block" : "max-sm:hidden"} max-sm:m-auto`}
           >
             <img
               src="/assets/content-img/track4.jpg"
               alt=""
-              className="cursor-pointer"
+              className="cursor-pointer max-sm:w-screen"
             />
             <div
               className={`absolute inset-0 hidden items-center justify-center group-hover:flex ${activeImage === "/assets/content-img/track4.jpg" ? "flex!" : ""}`}
@@ -358,12 +352,12 @@ export default function MusicGallery() {
             </h3>
           </div>
           <div
-            className={`group relative hover:[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)] ${activeImage === "/assets/content-img/track5.jpg" ? "[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)]" : ""}`}
+            className={`group relative hover:[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)] ${activeImage === "/assets/content-img/track5.jpg" ? "[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)]" : ""} ${activeImage === "/assets/content-img/track5.jpg" ? "max-sm:block" : "max-sm:hidden"} max-sm:m-auto`}
           >
             <img
               src="/assets/content-img/track5.jpg"
               alt=""
-              className="cursor-pointer"
+              className="cursor-pointer max-sm:w-screen"
             />
             <div
               className={`absolute inset-0 hidden items-center justify-center group-hover:flex ${activeImage === "/assets/content-img/track5.jpg" ? "flex!" : ""}`}
@@ -392,9 +386,16 @@ export default function MusicGallery() {
             </h3>
           </div>
         </div>
+
+        <button
+          onClick={handlePrevTrack}
+          className="order-first m-4 h-14 w-14 cursor-pointer self-center border-2 border-white text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-black max-sm:order-2"
+        >
+          <IoMdArrowDropleft size={40} className="m-auto" />
+        </button>
         <button
           onClick={handleNextTrack}
-          className="m-4 h-14 w-14 cursor-pointer self-center border-2 border-white p-1 text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-black"
+          className="m-4 h-14 w-14 cursor-pointer self-center border-2 border-white p-1 text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-black max-sm:order-last"
         >
           <IoMdArrowDropright size={40} className="m-auto" />
         </button>
