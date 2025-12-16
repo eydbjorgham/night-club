@@ -19,7 +19,7 @@ const LeaveComment = () => {
       </h1>
 
       <form onSubmit={handleSubmit(onSubmit)} noValidate className="text-white">
-        <div className="flex gap-8">
+        <div className="flex max-sm:flex max-sm:flex-col gap-8">
           <div className="flex-1">
             {errors.username && (
               <p className="mb-2 text-sm text-red-500">
