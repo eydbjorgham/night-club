@@ -22,7 +22,7 @@ const BlogPost = ({ id }) => {
   return (
     <section>
       <img src={post.asset.url} alt={post.title} className="m-auto mt-16" />
-      <h2 className="m-auto mt-8 w-[80vw] text-white capitalize">
+      <h2 className="m-auto text-4xl mt-8 w-[80vw] text-white capitalize">
         {post.title}
       </h2>
       <p className="m-auto mt-4 w-[80vw] text-(--tertiary-color)">

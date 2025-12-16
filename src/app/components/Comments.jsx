@@ -21,13 +21,13 @@ const Comments = () => {
       </h1>
 
       {comments.map((comment) => (
-        <div key={comment.id} className="mb-10 w-[70vw]">
-          <h2 className="mb-6 text-xl text-white">
+        <div key={comment.id} className="mb-10 w-[70vw] max-sm:w-full">
+          <p className="max-sm:text-s mb-6 text-xl text-white">
             {comment.name} -{" "}
             <span className="text-(--tertiary-color)">
               Posted {comment.date.substring(0, 10)}
             </span>
-          </h2>
+          </p>
           <p>{comment.content}</p>
         </div>
       ))}
