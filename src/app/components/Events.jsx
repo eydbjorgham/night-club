@@ -151,11 +151,11 @@ const Events = () => {
           <button
             key={index}
             onClick={() => setCurrentPage(index)}
-            className={
+            className={`h-3 w-3 cursor-pointer ${
               index === currentPage
-                ? "h-3 w-3 bg-(--tertiary-color)"
-                : "h-3 w-3 bg-(--secondary-color)"
-            }
+                ? "bg-(--tertiary-color)"
+                : "bg-(--secondary-color)"
+            }`}
           ></button>
         ))}
       </div>

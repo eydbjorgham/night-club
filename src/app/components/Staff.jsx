@@ -36,20 +36,20 @@ const Staff = () => {
             width={150}
             height={150}
           />
-          <h2 className="font-semibold text-xl text-(--secondary-color)">
+          <h2 className="text-xl font-semibold text-(--secondary-color)">
             {staff.name}
           </h2>
-          <p className="max-w-sm sm:max-w-3xl text-center leading-10 text-(--secondary-color)">
+          <p className="max-w-sm text-center leading-10 text-(--secondary-color) sm:max-w-3xl">
             {staff.content}
           </p>
           <div className="mt-4 flex justify-center gap-4">
-            <div className="transition-duration-300 border-2 text-(--secondary-color) border-white p-2 transition hover:border-(--tertiary-color) hover:text-(--tertiary-color)">
+            <div className="transition-duration-300 cursor-pointer border-2 border-white p-2 text-(--secondary-color) transition hover:border-(--tertiary-color) hover:text-(--tertiary-color)">
               <FaFacebookF size={20} />
             </div>
-            <div className="transition-duration-300 border-2 text-(--secondary-color) border-white p-2 transition hover:border-(--tertiary-color) hover:text-(--tertiary-color)">
+            <div className="transition-duration-300 cursor-pointer border-2 border-white p-2 text-(--secondary-color) transition hover:border-(--tertiary-color) hover:text-(--tertiary-color)">
               <FaTwitter size={20} />
             </div>
-            <div className="group transition-duration-300 border-2 text-(--secondary-color) border-white p-2 transition hover:border-(--tertiary-color) hover:text-(--tertiary-color)">
+            <div className="group transition-duration-300 cursor-pointer border-2 border-white p-2 text-(--secondary-color) transition hover:border-(--tertiary-color) hover:text-(--tertiary-color)">
               <FaSnapchatGhost size={20} />
             </div>
           </div>
@@ -59,11 +59,11 @@ const Staff = () => {
               <button
                 key={index}
                 onClick={() => setCurrentPage(index)}
-                className={
+                className={`h-3 w-3 cursor-pointer ${
                   index === currentPage
-                    ? "h-3 w-3 bg-(--tertiary-color)"
-                    : "h-3 w-3 bg-(--secondary-color)"
-                }
+                    ? "bg-(--tertiary-color)"
+                    : "bg-(--secondary-color)"
+                }`}
               ></button>
             ))}
           </div>
