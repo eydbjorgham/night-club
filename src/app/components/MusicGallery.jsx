@@ -213,15 +213,15 @@ export default function MusicGallery() {
           </div>
         </div>
       </div>
-      <div className="m-auto mt-8 flex justify-center max-sm:flex-col max-sm:items-center max-sm:gap-4">
-        <div className="flex bg-(--tertiary-color) max-sm:flex-col max-sm:order-first">
+      <div className="m-auto mt-8 flex justify-center max-sm:grid max-sm:grid-cols-2 max-sm:gap-4">
+        <div className="flex bg-(--tertiary-color) max-sm:order-first max-sm:col-span-2">
           <div
-            className={`group relativehover:[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)] ${activeImage === "/assets/content-img/track_thumb.jpg" ? "[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)]" : ""} ${activeImage === "/assets/content-img/track_thumb.jpg" ? "max-sm:block" : "max-sm:hidden"} max-sm:m-auto`}
+            className={`group relative hover:[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)] ${activeImage === "/assets/content-img/track_thumb.jpg" ? "[clip-path:polygon(50px_0,100%_0,100%_calc(100%-50px),calc(100%-50px)_100%,0_100%,0_50px)]" : ""} ${activeImage === "/assets/content-img/track_thumb.jpg" ? "max-sm:block" : "max-sm:hidden"} max-sm:m-auto`}
           >
             <img
               src="/assets/content-img/track_thumb.jpg"
               alt=""
-              className="cursor-pointer"
+              className="cursor-pointer max-sm:w-screen"
             />
             <div
               className={`absolute inset-0 hidden items-center justify-center group-hover:flex ${activeImage === "/assets/content-img/track_thumb.jpg" ? "flex!" : ""}`}
@@ -239,7 +239,7 @@ export default function MusicGallery() {
               >
                 <FaPlay
                   size={30}
-                  className="rounded-full text-(--tertiary-color)"
+                  className="cursor-pointer rounded-full text-(--tertiary-color)"
                 />
               </div>
             </div>
@@ -389,13 +389,13 @@ export default function MusicGallery() {
 
         <button
           onClick={handlePrevTrack}
-          className="order-first m-4 h-14 w-14 cursor-pointer self-center border-2 border-white text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-black max-sm:order-2"
+          className="order-first m-4 h-14 w-14 cursor-pointer self-center border-2 border-white text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-black max-sm:ml-auto"
         >
           <IoMdArrowDropleft size={40} className="m-auto" />
         </button>
         <button
           onClick={handleNextTrack}
-          className="m-4 h-14 w-14 cursor-pointer self-center border-2 border-white p-1 text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-black max-sm:order-last"
+          className="m-4 h-14 w-14 cursor-pointer self-center border-2 border-white p-1 text-white transition-all duration-300 ease-in-out hover:bg-white hover:text-black"
         >
           <IoMdArrowDropright size={40} className="m-auto" />
         </button>
