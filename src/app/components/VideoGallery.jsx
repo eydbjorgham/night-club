@@ -13,23 +13,25 @@ const VideoGallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const nextVideo = () => {
-    setCurrentIndex((prevIndex) => prevIndex + 1);
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % videoer.length);
   };
 
   const previousVideo = () => {
-    setCurrentIndex((prevIndex) => prevIndex - 1);
+    setCurrentIndex(
+      (prevIndex) => (prevIndex - 1 + videoer.length) % videoer.length,
+    );
   };
-console.log(currentIndex);
+  console.log(currentIndex);
 
   return (
     <section className="mt-8 mb-16">
-      <div className="sm:m-auto flex sm:w-[60vw] justify-center bg-(--tertiary-color)">
+      <div className="flex justify-center bg-(--tertiary-color) sm:m-auto sm:w-[60vw]">
         <video
           key={currentIndex}
           autoPlay
           loop
           muted
-          className="m-auto w-screen object-contain sm:w-[60vw] [clip-path:polygon(30px_0,100%_0,100%_calc(100%-30px),calc(100%-30px)_100%,0_100%,0_30px)]"
+          className="m-auto w-screen object-contain [clip-path:polygon(30px_0,100%_0,100%_calc(100%-30px),calc(100%-30px)_100%,0_100%,0_30px)] sm:w-[60vw]"
           src={videoer[currentIndex]}
         ></video>
       </div>
