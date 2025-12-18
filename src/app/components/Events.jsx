@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 const Events = () => {
   const [events, setEvents] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
-// Herefter kom vi på at vi skulle bruge en state til at holde styr på om det er mobil eller desktop
+  // Herefter kom vi på at vi skulle bruge en state til at holde styr på om det er mobil eller desktop
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -35,7 +35,6 @@ const Events = () => {
     fetchEvents();
   }, []);
 
-
   // Her blev der promptet til AI at lave en mobil version med 1 eventcard og desktop version med 2 eventcards
   const eventsPerPage = isMobile ? 1 : 2;
   const startIndex = currentPage * eventsPerPage;
@@ -44,10 +43,7 @@ const Events = () => {
 
   return (
     <>
-      <div
-
-        className="mt-(--section-padding) flex justify-center px-5 sm:px-0"
-      >
+      <div className="mt-(--section-padding) flex justify-center px-5 sm:px-0">
         <div className="overflow-hidden pt-8 sm:max-w-6xl">
           <motion.div
             animate={{ x: -currentPage * (100 + (isMobile ? 2 : 3)) + "%" }}
@@ -111,7 +107,7 @@ const Events = () => {
 
                   {/* Tekst BOX */}
                   <div
-                    className="absolute top-53 z-20 hidden w-full flex-col bg-(--primary-color) p-2 group-hover:flex sm:top-62.5 sm:pt-7 sm:pb-7 sm:pl-5"
+                    className="absolute top-53 z-20 hidden w-full flex-col bg-(--primary-color) p-2 group-hover:flex max-sm:top-75 sm:top-62.5 sm:pt-7 sm:pb-7 sm:pl-5"
                     style={{
                       clipPath: isMobile
                         ? "none"
@@ -144,9 +140,9 @@ const Events = () => {
                       hover: { y: 0, opacity: 1 },
                     }}
                     transition={{ duration: 0.1, ease: "easeInOut" }}
-                    className="absolute top-20 left-40 z-20 bg-(--tertiary-color) p-4 text-lg text-(--secondary-color) transition-all duration-300 ease-in-out hover:bg-white hover:text-(--tertiary-color) sm:left-55"
+                    className="absolute left-40 z-20 bg-(--tertiary-color) p-4 text-lg text-(--secondary-color) transition-all duration-300 ease-in-out hover:bg-white hover:text-(--tertiary-color) max-sm:top-30 max-sm:left-60 max-sm:m-auto sm:top-20 sm:left-55"
                   >
-                    <button>Book Now</button>
+                    <button className="">Book Now</button>
                   </motion.div>
                 </motion.div>
                 <div className="z-20 flex gap-5 bg-(--tertiary-color) p-2 pl-4 text-lg text-white">
@@ -160,7 +156,7 @@ const Events = () => {
         </div>
       </div>
 
-      <div className="mt-(--padding) pb-8 flex justify-center gap-2">
+      <div className="mt-(--padding) flex justify-center gap-2 pb-8">
         {Array.from({ length: totalPages }).map((_, index) => (
           <button
             key={index}
