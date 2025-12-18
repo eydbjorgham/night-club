@@ -40,11 +40,20 @@ export default function Home() {
                   <Overskrift text="Welcome in nightclub" />
                 </div>
                 <Welcome />
-                <div className="max-sm:m-auto max-sm:w-[80%]">
-                  <Overskrift text="Events of the month" />
+                <div
+                  className=""
+                  style={{
+                    backgroundImage:
+                      "linear-gradient(rgba(0, 0, 0, 0.6)), url('/assets/bg/slider_bg_overlay.png')",
+                    backgroundSize: "cover",
+                    backgroundRepeat: "noRepeat",
+                  }}
+                >
+                  <div className="max-sm:m-auto max-sm:w-[80%]">
+                    <Overskrift text="Events of the month" />
+                  </div>
+                  <Events />
                 </div>
-                <Events />
-
                 <div className="max-sm:m-auto max-sm:w-[70%]">
                   <Overskrift text=" night club Gallery" />
                 </div>
