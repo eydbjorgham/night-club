@@ -20,47 +20,54 @@ const ubuntu = Ubuntu({
 export default function Home() {
   return (
     <>
-      <div className={ubuntu.className}>
-        <div className="bg-(--primary-color)">
-          <Hero />
-          <nav className="sticky top-0 z-50 bg-(--tertiary-color)">
-            <Nav />
-          </nav>
+      <div
+        style={{
+          backgroundImage: "url('/assets/bg/pattern_bg.jpg')",
+          backgroundSize: "cover",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        <div className={ubuntu.className}>
+          <div className="bg-(--primary-color)">
+            <Hero />
+            <nav className="sticky top-0 z-50 bg-(--tertiary-color)">
+              <Nav />
+            </nav>
 
-          <main>
-            <section>
-              <div className="max-sm:m-auto max-sm:w-[80%]">
-                <Overskrift text="Welcome in nightclub" />
-              </div>
-              <Welcome />
-              <div className="max-sm:m-auto max-sm:w-[80%]">
-                <Overskrift text="Events of the month" />
-              </div>
-              <Events />
+            <main>
+              <section>
+                <div className="max-sm:m-auto max-sm:w-[80%]">
+                  <Overskrift text="Welcome in nightclub" />
+                </div>
+                <Welcome />
+                <div className="max-sm:m-auto max-sm:w-[80%]">
+                  <Overskrift text="Events of the month" />
+                </div>
+                <Events />
 
-              <div className="max-sm:m-auto max-sm:w-[70%]">
-                <Overskrift text=" night club Gallery" />
-              </div>
-              <Gallery />
-
+                <div className="max-sm:m-auto max-sm:w-[70%]">
+                  <Overskrift text=" night club Gallery" />
+                </div>
+                <Gallery />
 
                 <Overskrift text="night club track" />
-              <MusicGallery />
+                <MusicGallery />
 
-              <Overskrift text="latest video" />
-              <VideoGallery />
+                <Overskrift text="latest video" />
+                <VideoGallery />
 
-              <Staff />
+                <Staff />
 
-              <Overskrift text="Recent Blog" />
-              <RecentBlog />
+                <Overskrift text="Recent Blog" />
+                <RecentBlog />
 
-              <SubmitEmail />
-            </section>
-          </main>
-          <footer>
-            <Footer />
-          </footer>
+                <SubmitEmail />
+              </section>
+            </main>
+            <footer>
+              <Footer />
+            </footer>
+          </div>
         </div>
       </div>
     </>

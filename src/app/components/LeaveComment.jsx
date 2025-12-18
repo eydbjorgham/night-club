@@ -131,7 +131,7 @@ const LeaveComment = () => {
           >
             {isSubmitting ? "Submitting..." : "Submit"}
           </button>
-          {/* Success besked under button */}
+          {/* Success og error besked under button */}
           {successMessage && (
             <p className="mt-4 text-center text-green-500">{successMessage}</p>
           )}
