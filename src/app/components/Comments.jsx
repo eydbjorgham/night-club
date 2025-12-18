@@ -16,7 +16,7 @@ const Comments = () => {
 
   return (
     <div className="m-auto w-[80vw] pb-16 text-white">
-      <h1 className="mt-8 font-bold mb-12 text-3xl uppercase text-white">
+      <h1 className="mt-8 mb-12 text-3xl font-bold text-white uppercase">
         {comments.length} comments
       </h1>
 
@@ -25,7 +25,7 @@ const Comments = () => {
           <p className="max-sm:text-s mb-6 text-xl text-white">
             {comment.name} -{" "}
             <span className="text-(--tertiary-color)">
-              Posted {comment.date.substring(0, 10)}
+              Posted {comment.date?.substring(0, 10)}
             </span>
           </p>
           <p>{comment.content}</p>
