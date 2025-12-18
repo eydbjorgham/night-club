@@ -19,7 +19,13 @@ export default function BlogPage() {
             <Nav />
           </nav>
           <main>
-            <div className="mb-(--section-padding)">
+            <div
+              className="mb-(--section-padding) bg-cover bg-center pt-6 pb-6"
+              style={{
+                backgroundImage:
+                  "linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('/assets/bg/footerbg.jpg')",
+              }}
+            >
               <Overskrift text="Blog" />
             </div>
             <BlogInfo />

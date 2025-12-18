@@ -20,14 +20,21 @@ export default async function BlogPostPage({ params }) {
         <nav className="sticky top-0 z-50 bg-(--tertiary-color)">
           <Nav />
         </nav>
-        <Overskrift className="uppercase" text="blog post" />
         <section>
+          <div
+            className="mb-(--section-padding) bg-cover bg-center pt-6 pb-6"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('/assets/bg/footerbg.jpg')",
+            }}
+          >
+            <Overskrift text="Blog post" />
+          </div>
+
           <BlogPost id={id} />
-        </section>
-        <section>
+
           <Comments />
-        </section>
-        <section>
+
           <LeaveComment />
         </section>
         <footer>
