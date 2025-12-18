@@ -19,6 +19,9 @@ const Footer = () => {
     fetchBlogPosts();
   }, []);
 
+/*Prompt: Tilføj text-white på min p-tekst */
+/*note: for at spare tid */
+
   return (
     <footer className="m-auto mt-16 w-[90%] pb-16 max-sm:flex-col">
       <div className="space-between flex gap-4">
