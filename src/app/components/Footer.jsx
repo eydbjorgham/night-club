@@ -23,25 +23,13 @@ const Footer = () => {
 /*note: for at spare tid */
 
   return (
-    <footer
-              style={{
-                backgroundImage:
-                  "linear-gradient(rgba(0, 0, 0, 0.9)), url('/assets/bg/footerbg.jpg')",
-                  backgroundRepeat: "no-repeat",
-                  backgroundSize: "cover",
-              }}
-            
-
-      className="m-auto mt-(--overskrift-padding-top) pb-16 max-sm:flex-col"
-    >
-      <div className="space-between flex w-[90%] m-auto pt-8 gap-4">
+    <footer className="m-auto mt-(--overskrift-padding-top) w-[90%] pb-16 max-sm:flex-col">
+      <div className="space-between flex gap-4">
         <div className="flex flex-1 flex-col justify-evenly text-white uppercase max-sm:gap-12 max-sm:text-center">
           <Link href="/">
-            <img
-              className="max-sm:m-auto max-sm:w-[50%]"
-              src="/assets/Logo.png"
-              alt="logo"
-            />
+
+            <img className="max-sm:m-auto max-sm:w-[50%]" src="/assets/Logo.png" alt="logo" />
+
           </Link>
 
           <div className="">
