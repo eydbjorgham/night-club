@@ -27,6 +27,22 @@ const BookTable = ({ onTableSelect }) => {
       setReservations(data);
     };
 
+    /* Prompt: "Jeg skal mappe over tables og for hver table tjekke isTableBooked(tableNumber). Den skal kunne reserveres hvis den ikke i forvejen er booked, og ligeledes ikke reserveres hvis den er booked. Hvordan kan jeg tilgå dette?" */
+    /* AI svar: Du bruger en ternary operator (betinget operator) inde i .map(). Her er strukturen:
+
+Hvad skal du gøre:
+
+Indside .map(): Beregn const booked = isTableBooked(tableNumber) for hver iteration
+Brug ternary: booked ? <disabled div> : <clickable div>
+Disabled div: Skal have opacity-50, cursor-not-allowed og ingen onClick
+Clickable div: Skal have cursor-pointer, hover:scale-110 og onClick={() => onTableSelect(tableNumber)}
+Vigtig detalje:
+
+Både divs skal vise table-nummeret
+Kun den disabled skal vise "reserved" tekst
+Den clickable skal være interaktiv
+Prøv at implementere det, og hvis du får problemer, kan vi debugge sammen! */
+
     fetchReservations();
   }, []);
   const isTableBooked = (tableNumber) => {
@@ -55,7 +71,7 @@ const BookTable = ({ onTableSelect }) => {
             <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 transform text-2xl font-bold text-white">
               {tableNumber}
             </span>
-            <span className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-l font-bold text-red-500 uppercase">
+            <span className="text-l absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-bold text-red-500 uppercase">
               reserved
             </span>
           </div>
