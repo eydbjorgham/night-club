@@ -95,6 +95,7 @@ const BookTableForm = ({ selectedTable }) => {
             className="input:text-white w-full border border-white bg-transparent p-4 outline-none placeholder:text-white"
             {...register("email", {
               required: "Email is required",
+              /*Prompt: Hvordan skriver jeg med React Hook Forms i value at "@" og domæne skal være til stede for at formen kan sendes? */
               pattern: {
                 value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
                 message: "Please enter a valid email. Email must contain @ and domain (.com, .dk, etc.)",
