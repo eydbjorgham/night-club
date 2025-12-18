@@ -94,10 +94,10 @@ const BookTableForm = ({ selectedTable }) => {
             placeholder="Your Email"
             className="input:text-white w-full border border-white bg-transparent p-4 outline-none placeholder:text-white"
             {...register("email", {
-              required: "Email er påkrævet",
+              required: "Email is required",
               pattern: {
-                value: /@/,
-                message: "Email skal indeholde @",
+                value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+                message: "Please enter a valid email. Email must contain @ and domain (.com, .dk, etc.)",
               },
             })}
           />
