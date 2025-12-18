@@ -27,7 +27,7 @@ const Footer = () => {
       <div className="space-between flex gap-4">
         <div className="flex flex-1 flex-col justify-evenly text-white uppercase max-sm:gap-12 max-sm:text-center">
           <Link href="/">
-            <img className="max-sm:m-auto" src="assets/Logo.png" alt="logo" />
+            <img className="max-sm:m-auto" src="/assets/Logo.png" alt="logo" />
           </Link>
           <div>
             <h2 className="text-(--tertiary-color) max-sm:mb-4">location</h2>
