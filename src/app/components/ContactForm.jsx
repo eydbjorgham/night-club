@@ -117,7 +117,7 @@ const ContactForm = () => {
             ></textarea>
           </div>
 
-          <DevTool control={control} />
+          {/* <DevTool control={control} /> */}
 
           <div className="col-start-2 row-start-2 row-end-2 mt-4 grid place-self-end">
             <button

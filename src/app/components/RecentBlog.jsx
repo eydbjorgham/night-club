@@ -30,8 +30,8 @@ const RecentBlog = () => {
           className="h-auto w-full"
           />
         <h2 className="text-lg font-semibold text-(--secondary-color) truncate">{blog.title}</h2>
-        <h3 className="text-(--tertiary-color)">{blog.author}</h3>
-        <p className="text-(--secondary-color) max-w-prose truncate">{blog.content}</p>
+        <h3 className="text-(--tertiary-color)">BY: {blog.author} / {blog.comments}</h3>
+        <p className="text-(--secondary-color) max-w-prose line-clamp-3">{blog.content}</p>
       </div>
         )}
     </div>

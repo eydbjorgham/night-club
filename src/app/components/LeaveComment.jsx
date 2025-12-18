@@ -120,7 +120,7 @@ const LeaveComment = () => {
           ></textarea>
         </div>
 
-        <DevTool control={control} />
+        {/* <DevTool control={control} /> */}
 
         <div className="mt-4 flex flex-col items-end place-self-end">
           <button
