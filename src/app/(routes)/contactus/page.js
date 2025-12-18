@@ -17,7 +17,15 @@ export default function ContactUsPage () {
           <Nav />
         </nav>
         <main>
-          <Overskrift text="Contact us" />
+          <div
+            className="mb-(--section-padding) pt-6 pb-6 bg-cover bg-center"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('/assets/bg/footerbg.jpg')",
+            }}
+          >
+            <Overskrift text="Contact us" />
+          </div>
           <ContactForm />
         </main>
         <footer>

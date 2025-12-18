@@ -21,7 +21,15 @@ export default function BookTablePage() {
           <Nav />
         </nav>
         <main>
-          <Overskrift text="Book Table" />
+          <div
+            className="mb-(--section-padding) bg-cover bg-center pt-6 pb-6"
+            style={{
+              backgroundImage:
+                "linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url('/assets/bg/footerbg.jpg')",
+            }}
+          >
+            <Overskrift text="Book table" />
+          </div>
           <BookTable onTableSelect={setSelectedTable} />
           <BookTableForm selectedTable={selectedTable} />
         </main>
