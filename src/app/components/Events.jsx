@@ -45,12 +45,7 @@ const Events = () => {
   return (
     <>
       <div
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(0, 0, 0, 0.7)), url('/assets/bg/slider_bg_overlay.png')",
-          backgroundSize: "cover",
-          backgroundRepeat: "noRepeat",
-        }}
+
         className="mt-(--section-padding) flex justify-center px-5 sm:px-0"
       >
         <div className="overflow-hidden pt-8 sm:max-w-6xl">
@@ -165,7 +160,7 @@ const Events = () => {
         </div>
       </div>
 
-      <div className="mt-(--padding) flex justify-center gap-2">
+      <div className="mt-(--padding) pb-8 flex justify-center gap-2">
         {Array.from({ length: totalPages }).map((_, index) => (
           <button
             key={index}
