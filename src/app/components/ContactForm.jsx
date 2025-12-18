@@ -1,46 +1,50 @@
+// React hook form funktionaliteten til dette component er lavet med hjælp at to forskellige youtube videoer og AI,
+// som også er beskrevet i vores synopsis.
+
 "use client";
 import { useForm } from "react-hook-form";
 import { DevTool } from "@hookform/devtools";
 import { useState } from "react";
 
-
 const ContactForm = () => {
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
-    const form = useForm();
-    const { register, control, handleSubmit, formState, reset } = form;
-    const { errors, isSubmitting } = formState;
-    
-    const onSubmit = async (data) => {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-      
-      try {
-        const response = await fetch("http://localhost:4000/contact_messages", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            username: data.username,
-            email: data.email,
-            comment: data.comment,
-          }),
-        });
+  const form = useForm();
+  const { register, control, handleSubmit, formState, reset } = form;
+  const { errors, isSubmitting } = formState;
 
-        if (response.ok) {
-          console.log("Comment saved successfully");
-          setSuccessMessage("Comment submitted successfully")
-          reset();
-          setTimeout(() => setSuccessMessage(""), 3000);
-        } else {
-          console.error("Failed to submit comment");
-          setErrorMessage("Failed to submit comment. Please try again."
-          )
-        }
-      } catch (error) {
-        console.error("Error:", error);
+  const onSubmit = async (data) => {
+    await new Promise((resolve) => setTimeout(resolve, 1000));
+
+    try {
+      // Her bruger vi AI til at sende formulardata (username, email, comment)
+      // til backend via en POST request til /contact_messages endpoint
+      // Strukturen blev baseret på Troels' undervisning om HTTP methods (POST)
+      const response = await fetch("http://localhost:4000/contact_messages", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          username: data.username,
+          email: data.email,
+          comment: data.comment,
+        }),
+      });
+
+      if (response.ok) {
+        console.log("Comment saved successfully");
+        setSuccessMessage("Comment submitted successfully");
+        reset();
+        setTimeout(() => setSuccessMessage(""), 3000);
+      } else {
+        console.error("Failed to submit comment");
+        setErrorMessage("Failed to submit comment. Please try again.");
       }
-    };
+    } catch (error) {
+      console.error("Error:", error);
+    }
+  };
 
   return (
     <div className="grid-rows-auto mt-(--section-padding) grid grid-cols-3">
@@ -48,7 +52,7 @@ const ContactForm = () => {
         <form
           onSubmit={handleSubmit(onSubmit)}
           noValidate
-          className="flex w-full flex-1 flex-col gap-4 text-white items-center"
+          className="flex w-full flex-1 flex-col items-center gap-4 text-white"
         >
           <div>
             {errors.username && (
@@ -68,7 +72,7 @@ const ContactForm = () => {
                 },
               })}
               placeholder="Your Name"
-              className="input:text-white w-110 sm:w-120 border border-white bg-transparent p-4 outline-none placeholder:text-white"
+              className="input:text-white w-110 border border-white bg-transparent p-4 outline-none placeholder:text-white sm:w-120"
             />
           </div>
 
@@ -90,7 +94,7 @@ const ContactForm = () => {
                 },
               })}
               placeholder="Your Email"
-              className="input:text-white w-110 sm:w-120 border border-white bg-transparent p-4 outline-none placeholder:text-white"
+              className="input:text-white w-110 border border-white bg-transparent p-4 outline-none placeholder:text-white sm:w-120"
             />
           </div>
 
@@ -108,11 +112,13 @@ const ContactForm = () => {
                 required: "Please enter a valid comment",
               })}
               placeholder="Your Comment"
-              className="w-110 sm:w-120 resize border border-white bg-transparent p-2 pt-6 pb-60 pl-4 text-white outline-none placeholder:text-white sm:pb-30"
+              className="w-110 resize border border-white bg-transparent p-2 pt-6 pb-60 pl-4 text-white outline-none placeholder:text-white sm:w-120 sm:pb-30"
               rows="4"
             ></textarea>
           </div>
+
           <DevTool control={control} />
+
           <div className="col-start-2 row-start-2 row-end-2 mt-4 grid place-self-end">
             <button
               disabled={isSubmitting}
@@ -121,7 +127,8 @@ const ContactForm = () => {
             >
               {isSubmitting ? "Submitting..." : "Submit"}
             </button>
-            {/* Success besked under button */}
+
+            {/* Success/Error besked under button */}
             {successMessage && (
               <p className="mt-4 text-center text-green-500">
                 {successMessage}

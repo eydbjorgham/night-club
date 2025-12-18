@@ -16,7 +16,7 @@ const Comments = () => {
 
   return (
     <div className="m-auto w-[80vw] pb-16 text-white">
-      <h1 className="mt-8 mb-12 text-3xl text-white capitalize">
+      <h1 className="mt-8 font-bold mb-12 text-3xl uppercase text-white">
         {comments.length} comments
       </h1>
 

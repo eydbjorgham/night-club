@@ -29,10 +29,12 @@ const Footer = () => {
           <Link href="/">
             <img className="max-sm:m-auto max-sm:w-[50%]" src="assets/Logo.png" alt="logo" />
           </Link>
+
           <div className="">
             <h2 className="text-(--tertiary-color) max-sm:mb-4 max-sm:text-2xl">
               location
             </h2>
+
             <p>Kompagnistræde 278</p>
             <p> 1265 København K</p>
           </div>
