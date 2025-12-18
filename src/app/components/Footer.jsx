@@ -27,15 +27,19 @@ const Footer = () => {
       <div className="space-between flex gap-4">
         <div className="flex flex-1 flex-col justify-evenly text-white uppercase max-sm:gap-12 max-sm:text-center">
           <Link href="/">
-            <img className="max-sm:m-auto" src="assets/Logo.png" alt="logo" />
+            <img className="max-sm:m-auto max-sm:w-[50%]" src="assets/Logo.png" alt="logo" />
           </Link>
-          <div>
-            <h2 className="text-(--tertiary-color) max-sm:mb-4">location</h2>
+
+          <div className="">
+            <h2 className="text-(--tertiary-color) max-sm:mb-4 max-sm:text-2xl">
+              location
+            </h2>
+
             <p>Kompagnistræde 278</p>
             <p> 1265 København K</p>
           </div>
           <div>
-            <h2 className="text-(--tertiary-color) max-sm:mb-4">
+            <h2 className="text-(--tertiary-color) max-sm:mb-4 max-sm:text-2xl">
               opening hours
             </h2>
             <p>wed - thu: 10:30 pm to 3 am</p>
@@ -101,9 +105,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="mt-32 max-sm:mt-24 flex text-white max-sm:flex-col max-sm:gap-8">
+      <div className="mt-32 flex text-white max-sm:mt-24 max-sm:flex-col max-sm:gap-8">
         <div className="flex-1 place-items-center">
-          <div className="flex max-sm:flex-col gap-2 max-sm:text-center">
+          <div className="flex gap-2 max-sm:flex-col max-sm:text-center">
             <p>Night Club PSD Template </p>
             <p className="max-sm:hidden"> - </p>
             <p>All Rights Reserved</p>
