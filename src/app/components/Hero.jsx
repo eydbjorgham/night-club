@@ -5,9 +5,17 @@ import { useState, useEffect } from "react";
 
 const Hero = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const [heroImage, setHeroImage] = useState("/assets/bg/header_bg_2.jpg");
+  
 
   useEffect(() => {
-    // Simuler loading - ændre timeout til hvor længe du vil vise loading
+    const images = [
+      "/assets/bg/header_bg_1.jpg", 
+      "/assets/bg/header_bg_2.jpg"
+    ];
+    const randomImage = images[Math.floor(Math.random() * images.length)];
+    setHeroImage(randomImage);
+
     const timer = setTimeout(() => setIsLoading(false), 1000);
     return () => clearTimeout(timer);
   }, []);
@@ -39,7 +47,7 @@ const Hero = () => {
         className="h-full w-full"
       >
         <Image
-          src="/assets/bg/header_bg_2.jpg"
+          src={heroImage}
           alt="Hero"
           width={1200}
           height={600}
