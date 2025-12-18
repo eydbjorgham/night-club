@@ -25,7 +25,7 @@ const BookTableForm = ({ selectedTable }) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
 
     try {
-      const response = await fetch("http://localhost:4000/contact_messages", {
+      const response = await fetch("http://localhost:4000/reservations", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
