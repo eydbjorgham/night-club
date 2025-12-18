@@ -29,7 +29,7 @@ const Footer = () => {
           <Link href="/">
             <img className="max-sm:m-auto" src="assets/Logo.png" alt="logo" />
           </Link>
-          <div className="">
+          <div>
             <h2 className="text-(--tertiary-color) max-sm:mb-4">location</h2>
             <p>Kompagnistræde 278</p>
             <p> 1265 København K</p>

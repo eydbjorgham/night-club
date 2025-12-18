@@ -9,7 +9,6 @@ const Overskrift = ({ text }) => {
         alt="Illustration"
         width={400}
         height={200}
-        className=""
       />
     </div>
   );
