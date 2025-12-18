@@ -74,7 +74,7 @@ const BookTableForm = ({ selectedTable }) => {
             placeholder="Your Name"
             className="input:text-white w-full border border-white bg-transparent p-4 text-white outline-none placeholder:text-white"
             {...register("name", {
-              required: "Navn er påkrævet",
+              required: "Name is required",
               pattern: {
                 value: /^[A-Za-z\s]+$/,
                 message: "Please enter a valid name",
@@ -132,7 +132,7 @@ const BookTableForm = ({ selectedTable }) => {
             {...register("guests", {
               required: "Please enter number of guests",
               min: { value: 2, message: "Minimum 2 guests" },
-              max: { value: 8, message: "Maksimum 8 guests" },
+              max: { value: 8, message: "Maximum 8 guests" },
               valueAsNumber: true,
             })}
           />
@@ -166,7 +166,7 @@ const BookTableForm = ({ selectedTable }) => {
               required: "Phone number is required",
               pattern: {
                 value: /^\d{8}$/,
-                message: "Please enter a valid 8-digit phone number",
+                message: "Please enter a valid 8-digit phone number. Must only contain numbers",
               },
             })}
           />
