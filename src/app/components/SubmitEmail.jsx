@@ -15,7 +15,7 @@ const SubmitEmail = () => {
   };
 
   return (
-    <section className="mt-16 flex flex-col items-center text-white">
+    <section className="flex flex-col items-center text-white mt-(--overskrift-padding-top) mb-(--overskrift-padding-top)">
       <h1 className="mb-8 text-2xl font-bold uppercase max-sm:mb-4">
         want the latest night club news
       </h1>

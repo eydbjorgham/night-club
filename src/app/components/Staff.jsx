@@ -28,7 +28,7 @@ const Staff = () => {
       {displayedStaff.map((staff) => (
         <div
           key={staff.id}
-          className="mt-(--section-padding) flex flex-col items-center gap-5"
+          className="mt-(--overskrift-padding-top) flex flex-col items-center gap-5"
         >
           <img
             src={staff.asset.url}

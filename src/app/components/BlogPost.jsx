@@ -17,18 +17,21 @@ const BlogPost = ({ id }) => {
   }, [id]);
 
   if (!post)
-    return <div className="mt-16 text-center text-white">Loading...</div>;
+    return <div className="mt-(--overskrift-padding-top) text-center text-white">Loading...</div>;
 
   return (
     <section>
-      <img src={post.asset.url} alt={post.title} className="m-auto mt-16" />
+      <img 
+      src={post.asset.url} 
+      alt={post.title} 
+      className="m-auto sm:w-290 object-cover h-auto mt-(--overskrift-padding-top)" />
       <h2 className="m-auto text-4xl mt-8 w-[80vw] text-white capitalize">
         {post.title}
       </h2>
       <p className="m-auto mt-4 w-[80vw] text-(--tertiary-color)">
         BY: {post.author}
       </p>
-      <p className="m-auto mt-8 w-[80vw] pb-8 text-white">{post.content}</p>
+      <p className="m-auto leading-8 mt-8 w-[80vw] pb-8 text-white">{post.content}</p>
     </section>
   );
 };

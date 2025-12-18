@@ -120,7 +120,7 @@ const Gallery = () => {
               <img
                 src={selectedImage.asset.url}
                 alt={selectedImage.alt}
-                className="max-h-96 max-w-lg w-auto img-border"
+                className="max-h-96 max-w-xl w-auto img-border"
               />
               </div>
               <h2 className="text-md sm:text-xl ml-5 font-bold text-(--secondary-color)">

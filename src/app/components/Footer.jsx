@@ -23,7 +23,7 @@ const Footer = () => {
 /*note: for at spare tid */
 
   return (
-    <footer className="m-auto mt-16 w-[90%] pb-16 max-sm:flex-col">
+    <footer className="m-auto mt-(--overskrift-padding-top) w-[90%] pb-16 max-sm:flex-col">
       <div className="space-between flex gap-4">
         <div className="flex flex-1 flex-col justify-evenly text-white uppercase max-sm:gap-12 max-sm:text-center">
           <Link href="/">
