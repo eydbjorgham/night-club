@@ -95,10 +95,10 @@ const Gallery = () => {
         </div>
       </div>
 
-      {/* Lightbox Modal */}
+      {/* Lightbox */}
       {selectedImage && (
         <div
-          className="bg-opacity-80 fixed inset-0 z-50 flex items-center justify-center bg-black"
+          className=" fixed inset-0 z-50 flex items-center justify-center bg-black/90"
           onClick={() => setSelectedImage(null)}
         >
           {/* Content - centeret */}
