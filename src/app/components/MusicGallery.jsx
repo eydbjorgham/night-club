@@ -100,6 +100,10 @@ export default function MusicGallery() {
     setCurrentTime(audioRef.current.currentTime);
   };
 
+  /* Prompt: "Hvordan finder jeg ud af varigheden for hver individuel sang, når brugeren skifter mellem trackene?"*/
+  /* AI svar: "Først skal du definere en handleLoadedMetadata-funktion der henter duration fra audioRef.current.duration og gemmer det i state med setDuration(). Derefter tilføjer du onLoadedMetadata={handleLoadedMetadata} til audio-elementet, så funktionen triggeres når metadata loader. Så har du duration gemt i state, som du kan bruge til beregninger senere."
+ */
+
   const handleLoadedMetadata = () => {
     setDuration(audioRef.current.duration);
   };
