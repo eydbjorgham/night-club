@@ -1,18 +1,26 @@
+// I dette komponent er der blevet gjort brug af AI til at få animationer til at ligne som figma designet.
+// AI er aldrig blevet brugt til at skrive hele koden, blot som et værktøj til at huske på alle de forskellige <tags> og bidrage med små dele af koden.
+
 "use client";
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
+// Her blev der promptet til AI hvordan man kunne lave en mobil version med 1 eventcard og desktop version med 2 eventcards
 const Events = () => {
   const [events, setEvents] = useState([]);
   const [currentPage, setCurrentPage] = useState(0);
+// Herefter kom vi på at vi skulle bruge en state til at holde styr på om det er mobil eller desktop
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    // Her opretter vi en funktion der tjekker vinduets bredde for at sætte isMobile state
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768); // Juster breakpoint efter behov
+      setIsMobile(window.innerWidth < 768);
     };
 
-    handleResize(); // Initial check
+    // Her tilføjede vi så en event listener der lytter efter ændringer i vinduets størrelse,
+    // og opdaterer isMobile state baseret på om skærmen er mobil eller desktop
+    handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -27,7 +35,9 @@ const Events = () => {
     fetchEvents();
   }, []);
 
-  const eventsPerPage = isMobile ? 1 : 2; // 1 eventcard på mobil, 2 på desktop
+
+  // Her blev der promptet til AI at lave en mobil version med 1 eventcard og desktop version med 2 eventcards
+  const eventsPerPage = isMobile ? 1 : 2;
   const startIndex = currentPage * eventsPerPage;
   const displayedEvents = events.slice(startIndex, startIndex + eventsPerPage);
   const totalPages = Math.ceil(events.length / eventsPerPage);
@@ -52,6 +62,7 @@ const Events = () => {
 
                 <motion.div
                   className="relative w-full"
+                  // Her blev der promptet til AI om der ikke er en anden funktion i framer motion udover 'animate' og den kom så med 'whileHover'
                   whileHover="hover"
                   initial="initial"
                 >
@@ -63,7 +74,7 @@ const Events = () => {
                     className="h-auto w-full object-cover group-hover:[clip-path:polygon(80px_0,100%_0,100%_calc(100%-80px),calc(100%-80px)_100%,0_100%,0_80px)]"
                   />
 
-                  {/* Border */}
+                  {/* Border mobil */}
                   <motion.div
                     variants={{
                       initial: {
@@ -79,7 +90,7 @@ const Events = () => {
                     className="absolute inset-0 z-10 hidden border-t border-b border-(--tertiary-color) group-hover:flex sm:hidden"
                   ></motion.div>
 
-                  {/* Border desktop - øverste venstre + nederste højre hjørne */}
+                  {/* Border desktop */}
                   <motion.div
                     variants={{
                       initial: {
