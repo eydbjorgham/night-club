@@ -109,7 +109,7 @@ const Gallery = () => {
             {/* Pil venstre */}
             <button
               onClick={previousImage}
-              className="cursor-pointer transition-duration-300 p-0.2 mx-auto flex items-center border-2 border-white text-center text-(--secondary-color) transition hover:border-(--tertiary-color) hover:text-(--tertiary-color)"
+              className="cursor-pointer transition-duration-300 p-0.2 mx-auto flex items-center border-2 border-white text-center text-(--secondary-color) transition hover:bg-(--secondary-color) hover:text-(--primary-color)"
             >
               <MdOutlineArrowLeft size={40} />
             </button>
@@ -146,7 +146,7 @@ const Gallery = () => {
             {/* Pil højre */}
             <button
               onClick={nextImage}
-              className=" cursor-pointer transition-duration-300 p-0.2 mx-auto flex items-center border-2 border-white text-center text-(--secondary-color) transition hover:border-(--tertiary-color) hover:text-(--tertiary-color)"
+              className="cursor-pointer transition-duration-300 p-0.2 mx-auto flex items-center border-2 border-white text-center text-(--secondary-color) transition hover:bg-(--secondary-color) hover:text-(--primary-color)"
             >
               <MdOutlineArrowRight size={40} />
             </button>

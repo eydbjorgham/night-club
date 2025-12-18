@@ -50,13 +50,13 @@ const Staff = () => {
             {staff.content}
           </p>
           <div className="mt-4 flex justify-center gap-4">
-            <div className="transition-duration-300 cursor-pointer border-2 border-white p-2 text-(--secondary-color) transition hover:border-(--tertiary-color) hover:text-(--tertiary-color)">
+            <div className="transition-duration-300 cursor-pointer border-2 border-white p-2 text-(--secondary-color) transition hover:bg-(--secondary-color) hover:text-(--primary-color)">
               <FaFacebookF size={20} />
             </div>
-            <div className="transition-duration-300 cursor-pointer border-2 border-white p-2 text-(--secondary-color) transition hover:border-(--tertiary-color) hover:text-(--tertiary-color)">
+            <div className="transition-duration-300 cursor-pointer border-2 border-white p-2 text-(--secondary-color) transition hover:bg-(--secondary-color) hover:text-(--primary-color)">
               <FaTwitter size={20} />
             </div>
-            <div className="group transition-duration-300 cursor-pointer border-2 border-white p-2 text-(--secondary-color) transition hover:border-(--tertiary-color) hover:text-(--tertiary-color)">
+            <div className="group transition-duration-300 cursor-pointer border-2 border-white p-2 text-(--secondary-color) transition hover:bg-(--secondary-color) hover:text-(--primary-color)">
               <FaSnapchatGhost size={20} />
             </div>
           </div>
