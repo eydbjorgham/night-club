@@ -44,8 +44,16 @@ const Events = () => {
 
   return (
     <>
-      <div className="mt-(--section-padding) flex justify-center px-5 sm:px-0">
-        <div className="overflow-hidden sm:max-w-6xl">
+      <div
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(0, 0, 0, 0.7)), url('/assets/bg/slider_bg_overlay.png')",
+          backgroundSize: "cover",
+          backgroundRepeat: "noRepeat",
+        }}
+        className="mt-(--section-padding) flex justify-center px-5 sm:px-0"
+      >
+        <div className="overflow-hidden pt-8 sm:max-w-6xl">
           <motion.div
             animate={{ x: -currentPage * (100 + (isMobile ? 2 : 3)) + "%" }}
             transition={{ type: "tween", duration: 0.5 }}

@@ -24,11 +24,18 @@ const Staff = () => {
   const totalPages = Math.ceil(staffList.length / staffPerPage);
   
   return (
-    <div>
+    <div
+      style={{
+        backgroundImage:
+          "linear-gradient(rgba(0, 0, 0, 0.9)), url('/assets/bg/footerbg.jpg')",
+        backgroundSize: "cover",
+        backgroundRepeat: "noRepeat",
+      }}
+    >
       {displayedStaff.map((staff) => (
         <div
           key={staff.id}
-          className="mt-(--overskrift-padding-top) flex flex-col items-center gap-5"
+          className="mt-(--overskrift-padding-top) pt-8 flex flex-col items-center gap-5"
         >
           <img
             src={staff.asset.url}
