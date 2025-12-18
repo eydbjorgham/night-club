@@ -7,15 +7,13 @@ const Nav = () => {
   const [navActive, setNavActive] = useState(false);
 
   
-
-
   return (
     <>
       {/* Desktop Navigation */}
       <nav className="main-border hidden justify-evenly bg-black p-4 text-white uppercase sm:flex">
         <div>
           <Link href="/">
-            <img src="assets/Logo.png" alt="logo" />
+            <img src="/assets/Logo.png" alt="logo" />
           </Link>
         </div>
         <ul className="m-4 flex gap-8">
