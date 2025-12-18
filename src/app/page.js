@@ -22,35 +22,39 @@ export default function Home() {
     <>
       <div className={ubuntu.className}>
         <div className="bg-(--primary-color)">
-          
-            <Hero />
-            <nav className="sticky top-0 z-50 bg-(--tertiary-color)">
-              <Nav />
-            </nav>
-          
+          <Hero />
+          <nav className="sticky top-0 z-50 bg-(--tertiary-color)">
+            <Nav />
+          </nav>
+
           <main>
             <section>
-              <Overskrift text="Welcome in nightclub" />
+              <div className="max-sm:m-auto max-sm:w-[80%]">
+                <Overskrift text="Welcome in nightclub" />
+              </div>
               <Welcome />
-            
-              <Overskrift text="Events of the month" />
+              <div className="max-sm:m-auto max-sm:w-[80%]">
+                <Overskrift text="Events of the month" />
+              </div>
               <Events />
-            
-              <Overskrift text="Gallery" />
+
+              <div className="max-sm:m-auto max-sm:w-[70%]">
+                <Overskrift text=" night club Gallery" />
+              </div>
               <Gallery />
-           
-              <Overskrift className="capitalize" text="night club track" />
+
+
+                <Overskrift text="night club track" />
               <MusicGallery />
-            
-              <Overskrift className="capitalize" text="latest video" />
+
+              <Overskrift text="latest video" />
               <VideoGallery />
-            
-              
+
               <Staff />
-            
+
               <Overskrift text="Recent Blog" />
               <RecentBlog />
-            
+
               <SubmitEmail />
             </section>
           </main>
