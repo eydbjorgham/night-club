@@ -19,12 +19,14 @@ const SubmitEmail = () => {
       <h1 className="mb-8 text-2xl font-bold uppercase max-sm:mb-4">
         want the latest night club news
       </h1>
-      <p>
-        Subscribe to our newsletter to never miss an{" "}
-        <a href="" className="text-(--tertiary-color) capitalize">
-          event
-        </a>
-      </p>
+      <div className="max-sm:w-[35%] max-sm:text-center">
+        <p>
+          Subscribe to our newsletter to never miss an{" "}
+          <a href="" className="text-(--tertiary-color) capitalize">
+            event
+          </a>
+        </p>
+      </div>
       <div className="mt-8 flex w-[40%] items-center justify-between gap-4 max-sm:flex-col">
         <form
           action="input"
